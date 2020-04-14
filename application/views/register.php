@@ -47,6 +47,8 @@
 			</div>
 			<button type="submit" class="btn btn-primary button1">Submit</button>
 		</form>
+		
+		
 		<script src="<?php echo base_url('assets/js/jquery-3.2.1.min.js'); ?>"></script>
 	</body>
 </html>

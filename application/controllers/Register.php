@@ -10,7 +10,7 @@ class Register extends CI_Controller {
 
 	public function index()
 	{
-		// $this->load->view('header');
+		$this->load->view('header');
 		
 		$this->load->view('register');
 	}
@@ -38,7 +38,7 @@ class Register extends CI_Controller {
                         $error = array('error' => $this->upload->display_errors());
                         $this->load->view('register', $error);
 					} else {
-						redirect('/profile'); //register berhasil, dialihkan ke page profile
+						redirect('/login'); //register berhasil, dialihkan ke page login
 					}
 
 			}else{

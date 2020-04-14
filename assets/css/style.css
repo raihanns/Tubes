@@ -1,7 +1,8 @@
 body {
 	min-height: 100vh;
-	background-image: url('../assets/images/background1.jpg');
-	background-color: #3586FF;
+	background-image: url('https://wallpaperaccess.com/full/1282794.jpg');
+	background-size: 100%;
+	/* background-color: #3586FF; */
 
 	background-attachment: fixed;
 	background-position: center;
