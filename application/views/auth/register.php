@@ -1,10 +1,5 @@
 <form action="<?= site_url('auth/register') ?>" method="post">
     <h2>REGISTER</h2>
-    <!-- <?php if (isset($_SESSION['error'])) { ?>
-        <div class="alert alert-danger" role="alert">
-            <?= $_SESSION['error'] ?>
-        </div>
-    <?php } ?> -->
 
     <div class="form-group">
         <div class="form-row">

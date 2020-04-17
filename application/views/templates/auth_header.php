@@ -18,7 +18,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="<?php echo base_url(); ?>">Home <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="<?php echo base_url('about'); ?>">Tentang Kami</a></li>
                     <li><a href="#">Kontak</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Informasi
