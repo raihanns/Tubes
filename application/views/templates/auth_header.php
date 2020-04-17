@@ -32,7 +32,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="<?php echo base_url('auth/register'); ?>"><span class="glyphicon glyphicon-user"></span> Daftar</a></li>
-                    <li class="active"><a href="<?= site_url('auth') ?>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="<?= site_url('auth') ?>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>

@@ -1,42 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
     <title><?= $title ?></title>
-    <link href="<?= base_url('assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/css/dashboard.css'); ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/css/all.css'); ?>" rel="stylesheet">
 
+    <!-- Bootstrap core CSS -->
+    <link href="<?= base_url('assets/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <link href="<?= base_url('assets/bootstrap/dashboard.css'); ?>" rel="stylesheet">
 </head>
 
 <body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">HealtHub</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a>Selamat datang, <b><?= $user['nama_depan']; ?></a></li>
-                    <!-- <li><img src="..." alt="..." class="img-circle"></li> -->
-                </ul>
-            </div>
-        </div>
+    <nav class="navbar navbar-dark fixed-top flex-md-nowrap p-0 shadow" style="background-color: #365b96 ;">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">HealtHub</a>
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link">
+                    <span>SELAMAT DATANG, <b><?= $user['nama_depan']; ?></b>!</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="">
+                    <span data-feather="settings"></span>
+                    Account
+                </a>
+            </li>
+        </ul>
     </nav>
