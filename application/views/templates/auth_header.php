@@ -18,7 +18,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="<?php echo base_url(); ?>">Home <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="<?php echo base_url('aboutus/index');?>">Tentang Kami</a></li>
                     <li><a href="#">Kontak</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Informasi
@@ -31,7 +31,6 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="<?php echo base_url('auth/register'); ?>"><span class="glyphicon glyphicon-user"></span> Daftar</a></li>
                     <li class="active"><a href="<?= site_url('auth') ?>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
