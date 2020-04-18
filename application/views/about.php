@@ -72,6 +72,4 @@
 			ariatur facere eius, adipisci blanditiis consequatur
 		</p>
 	</div>
-
-
 </div>
