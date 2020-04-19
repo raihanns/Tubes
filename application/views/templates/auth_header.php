@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>" />
-    <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>" />
+    <link type="text/css" rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css'); ?>" />
+    <link type="text/css" rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?= $title ?></title>
@@ -41,9 +41,6 @@
         color: #fff;
     }
 
-    .dropdown-menu {
-        background-color: inherit;
-    }
 
     button {
         transition: 0.3s ease;
