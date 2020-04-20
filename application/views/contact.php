@@ -1,78 +1,173 @@
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
 <style>
     body {
-        background-image: url("https://media.winnipegfreepress.com/images/NEP7110820.jpg");
+        background-color: white;
     }
 
-    .contact {
+    /* ---------------------header-------------------- */
+    .header {
+        /* background-image: url("https://cdn.pixabay.com/photo/2017/10/31/23/26/panorama-2906782__340.jpg"); */
+        background-color: aquamarine;
+        height: 450px;
+    }
+
+    .header h1 {
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        font-size: 2cm;
+        padding-top: 100px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .header p {
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        padding-top: 30px;
+        font-size: 30px;
+    }
+
+    /* ------------------------BODY--------------------------- */
+
+    .hp {
+        padding-top: 50px;
+        padding-left: 400px;
+        font-size: 20px;
+    }
+
+    .hp h1 {
+        font-family: "MS Sans Serif", Geneva, sans-serif;
+        font-size: 25px;
+        width: 50%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hp p {
+        font-family: "MS Sans Serif", Geneva, sans-serif;
+        font-size: 20px;
+        width: 47%;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    .alamat {
+        padding-top: 30px;
+        padding-left: 150px;
+    }
+
+    .alamat p {
+        font-family: "MS Sans Serif", Geneva, sans-serif;
+        font-size: 20px;
         width: 60%;
+        align-items: flex-start;
+        justify-content: space-between;
     }
 
-    .container {
-        border-radius: 100px;
+    .alamat h1 {
+        font-family: "MS Sans Serif", Geneva, sans-serif;
+        font-size: 30px;
+        width: 40%;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    .gambar {
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    /* --------------------------------BOTTOM-------------------------- */
+    .bottom {
+        background-color: black;
+        height: 200px;
+        margin-top: 100px;
+        color: white;
+    }
+
+    .customer h1 {
+        font-size: 30px;
+        padding-left: 400px;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    .customer p {
+        font-size: 15px;
+        padding-left: 400px;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    .follow p {
+        font-size: 30px;
+        padding-left: 350px;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
     }
 </style>
-<form class="contact">
-    <div class="jumbotron jumbotron-sm">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-lg-12">
-                    <h1>Contact us </h1>
-                </div>
-            </div>
-        </div>
+<div class="contact">
+    <div class="header">
+        <h1><b> Contact Us</b></h1>
+        <p><i>"Always laugh when you can. It is cheap medicine"</i></p>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="well well-sm">
-
-                    <form>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <!------------------------------------------ NAME -------------------------------------------->
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Name" required="required" />
-                                </div>
-                                <!-------------------------------------------- EMAIL --------------------------------------------->
-                                <div class="form-group">
-                                    <label for="email">Email Address</label>
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-                                        <input type="email" class="form-control" id="email" placeholder="Email" required="required" /></div>
-                                </div>
-                                <!----------------------------------------------SUBJECT------------------------------------ -->
-                                <div class="form-group">
-                                    <label for="email">Nomor Handphone</label>
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                                        <input type="text" class="form-control" id="nohp" placeholder="No Hp" required="required" /></div>
-                                </div>
-                                <!----------------------------------------MESSAGE----------------------------------------------- -->
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="name">
-                                        Message</label>
-                                    <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="Message"></textarea>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12">
-                                <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
-                                    Send Message</button>
-                            </div>
-
+    <div class="body">
+        <table class="table" border="1">
+            <tr>
+                <td>
+                    <div class="hp">
+                        <div class="form-group">
+                            <h1> <span class="glyphicon glyphicon-phone"><b> 021-82222222</b></span></h1>
+                            <p>Monday - Friday
+                                08:00 AM - 22:00 PM
+                            </p>
                         </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-md-4">
-            </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="alamat">
+                        <h1 for="alamat">Address</h1>
+                        <p> Jl. Telekomunikasi Jl. Terusan Buah Batu, Sukapura,<br> Kec. Dayeuhkolot, Bandung, Jawa Barat 40257</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="gambar">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.298822307253!2d107.62834001477327!3d-6.974027994961787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6285c5b7da517%3A0x864485f26a388f95!2sTelkom%20University!5e0!3m2!1sen!2sid!4v1587362419881!5m2!1sen!2sid" width="500" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
     </div>
-</form>
+    <div class="bottom">
+        <table id="table" border="1">
+            <tr>
+                <td class="customer">
+                    <h1>CUSTOMER SUPPORT</h1>
+                    <p>Let Us Help Find You're Looking For</p>
+                </td>
+                <td class="follow">
+                    <p>FOLLOW US</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+            <tr>
+                <td>HELP</td>
+                <td>FAQ</td>
+                <td>CONTACT</td>
+            </tr>
+            </td>
+            <td>
+
+            </td>
+            </tr>
+        </table>
+    </div>
+</div>
