@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 21, 2020 at 01:39 PM
+-- Generation Time: Apr 21, 2020 at 05:36 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -46,7 +46,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `nama_depan`, `nama_belakang`, `username`, `email`, `password`, `image`, `role_id`, `date_created`) VALUES
 (1, 'admin', 'mantap', 'admin', 'admiin@admin.com', 'admin', 'default.jpg', 1, 1587077337),
-(4, 'user', 'biasa', 'user', 'user@user.com', 'user', 'default.jpg', 2, 1587079584);
+(4, 'user', 'biasa', 'user', 'user@user.com', 'user', 'default.jpg', 2, 1587079584),
+(5, 'Tes', 'Tis', 'testis', '12321@1232.com', '123', 'default.jpg', 2, 1587080061),
+(6, 'raihan', '123', '123', '12321@123.com', '123', 'default.jpg', 2, 1587467436);
 
 -- --------------------------------------------------------
 
@@ -67,7 +69,8 @@ CREATE TABLE `user_access_menu` (
 INSERT INTO `user_access_menu` (`id`, `role_id`, `menu_id`) VALUES
 (1, 1, 1),
 (2, 1, 2),
-(3, 2, 2);
+(3, 2, 2),
+(4, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -86,7 +89,9 @@ CREATE TABLE `user_menu` (
 
 INSERT INTO `user_menu` (`id`, `menu`) VALUES
 (1, 'Admin'),
-(2, 'User');
+(2, 'User'),
+(3, 'Menu'),
+(4, '123');
 
 -- --------------------------------------------------------
 
@@ -129,7 +134,11 @@ CREATE TABLE `user_sub_menu` (
 INSERT INTO `user_sub_menu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active`) VALUES
 (1, 1, 'Dashboard', 'admin', 'home', 1),
 (2, 2, 'My Profile', 'user', 'user', 1),
-(3, 2, 'Edit Profile', 'user/edit', 'edit', 1);
+(3, 2, 'Edit Profile', 'user/edit', 'edit', 1),
+(4, 3, 'Menu Management', 'menu', 'menu', 1),
+(5, 3, 'Submenu Management', 'menu/submenu', 'folder', 1),
+(6, 1, 'Data Rumah Sakit', 'menu/tes', 'hard-drive', 1),
+(7, 4, 'tes', 'tes', 'tes', 1);
 
 --
 -- Indexes for dumped tables
@@ -179,13 +188,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user_access_menu`
 --
 ALTER TABLE `user_access_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user_menu`
 --
 ALTER TABLE `user_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user_role`
@@ -197,7 +206,7 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `user_sub_menu`
 --
 ALTER TABLE `user_sub_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
