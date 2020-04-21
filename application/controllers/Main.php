@@ -5,7 +5,7 @@ class Main extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
-		$this->load->model('Model_User');
+		$this->load->model('M_Auth');
 	}
 
 	public function index()
@@ -17,4 +17,3 @@ class Main extends CI_Controller {
 
 	}
 }
-?>
