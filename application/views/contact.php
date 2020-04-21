@@ -4,10 +4,16 @@
     }
 
     /* ---------------------header-------------------- */
+
+    .img {
+        margin-top: 0px;
+        /* margin-left: 500px; */
+        /* margin-bottom: -50px; */
+    }
+
     .header {
-        /* background-image: url("https://cdn.pixabay.com/photo/2017/10/31/23/26/panorama-2906782__340.jpg"); */
         background-color: aquamarine;
-        height: 450px;
+        height: 300px;
     }
 
     .header h1 {
@@ -17,6 +23,7 @@
         font-size: 2cm;
         padding-top: 100px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 0px;
     }
 
     .header p {
@@ -25,6 +32,7 @@
         text-align: center;
         padding-top: 30px;
         font-size: 30px;
+        margin-top: 0px;
     }
 
     /* ------------------------BODY--------------------------- */
@@ -38,15 +46,15 @@
     .hp h1 {
         font-family: "MS Sans Serif", Geneva, sans-serif;
         font-size: 25px;
-        width: 50%;
+        width: 60%;
         align-items: center;
         justify-content: space-between;
     }
 
     .hp p {
         font-family: "MS Sans Serif", Geneva, sans-serif;
-        font-size: 20px;
-        width: 47%;
+        font-size: 28px;
+        width: 55%;
         align-items: center;
         text-align: center;
         justify-content: space-between;
@@ -59,7 +67,7 @@
 
     .alamat p {
         font-family: "MS Sans Serif", Geneva, sans-serif;
-        font-size: 20px;
+        font-size: 28px;
         width: 60%;
         align-items: flex-start;
         justify-content: space-between;
@@ -89,7 +97,7 @@
     }
 
     .customer h1 {
-        font-size: 30px;
+        font-size: 20px;
         padding-left: 400px;
         width: 100%;
         align-items: center;
@@ -107,12 +115,22 @@
     }
 
     .follow p {
-        font-size: 30px;
+        font-size: 20px;
         padding-left: 350px;
         width: 100%;
         align-items: center;
         text-align: center;
         justify-content: space-between;
+    }
+
+    .ig {
+        padding-left: 240px;
+    }
+
+    .x {
+        padding-left: 430px;
+        padding-right: 120px;
+        font-size: 20px;
     }
 </style>
 <div class="contact">
@@ -120,8 +138,12 @@
         <h1><b> Contact Us</b></h1>
         <p><i>"Always laugh when you can. It is cheap medicine"</i></p>
     </div>
+    <div class="img">
+        <!-- <img src="https://cdn.pixabay.com/photo/2017/10/31/23/26/panorama-2906782__340.jpg" width="70%" height="100%"> -->
+        <img src="<?= base_url() . 'gambar/1.jpg' ?>" width="100%%">
+    </div>
     <div class="body">
-        <table class="table" border="1">
+        <table class="table">
             <tr>
                 <td>
                     <div class="hp">
@@ -146,7 +168,7 @@
         </div>
     </div>
     <div class="bottom">
-        <table id="table" border="1">
+        <table id="table">
             <tr>
                 <td class="customer">
                     <h1>CUSTOMER SUPPORT</h1>
@@ -157,16 +179,25 @@
                 </td>
             </tr>
             <tr>
-                <td>
-            <tr>
-                <td>HELP</td>
-                <td>FAQ</td>
-                <td>CONTACT</td>
-            </tr>
-            </td>
-            <td>
-
-            </td>
+                <table>
+                    <tr>
+                        <td class="x">
+                            <table>
+                                <tr>
+                                    <p>HELP FAQ CONTACT</p>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="ig">
+                                <img src="<?= base_url() . 'gambar/ig.png' ?>" width="28px">
+                                <img src="<?= base_url() . 'gambar/fb.png' ?>" width="28px">
+                                <img src="<?= base_url() . 'gambar/twitter.png' ?>" width="38px">
+                                <img src="<?= base_url() . 'gambar/yt.png' ?>" width="38px">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
             </tr>
         </table>
     </div>
