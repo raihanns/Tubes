@@ -14,9 +14,9 @@ class Auth extends CI_Controller
         $this->form_validation->set_rules('password', 'Password', 'required|trim');
         if ($this->form_validation->run() == FALSE) {
             $data['title'] = 'User Login';
-            $this->load->view('templates/auth_header', $data);
-            $this->load->view('auth/login');
-            $this->load->view('templates/auth_footer');
+            // $this->load->view('templates/auth_header', $data);
+            $this->load->view('auth/login',$data);
+            $this->load->view('templates/footer');
         } else {
             $this->_login();
         }
@@ -73,9 +73,9 @@ class Auth extends CI_Controller
         $this->form_validation->set_rules('repassword', 'Repassword', 'required|trim|matches[password]');
         if ($this->form_validation->run() == FALSE) {
             $data['title'] = 'User Register';
-            $this->load->view('templates/auth_header', $data);
-            $this->load->view('auth/register');
-            $this->load->view('templates/auth_footer');
+            // $this->load->view('templates/auth_header', $data);
+            $this->load->view('auth/register',$data);
+            $this->load->view('templates/footer');
         } else {
             $data = [
                 'nama_depan' => $this->input->post('nama_depan', true),
