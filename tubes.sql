@@ -137,8 +137,7 @@ INSERT INTO `user_sub_menu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active
 (3, 2, 'Edit Profile', 'user/edit', 'edit', 1),
 (4, 3, 'Menu Management', 'menu', 'menu', 1),
 (5, 3, 'Submenu Management', 'menu/submenu', 'folder', 1),
-(6, 1, 'Data Rumah Sakit', 'menu/tes', 'hard-drive', 1),
-(7, 4, 'tes', 'tes', 'tes', 1);
+(6, 1, 'Data Rumah Sakit', 'menu/tes', 'hard-drive', 1);
 
 --
 -- Indexes for dumped tables
