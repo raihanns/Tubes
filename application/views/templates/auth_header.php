@@ -15,13 +15,14 @@
 	<link type="text/css" rel="stylesheet" href="<?= base_url('assets/css/style.css?d='); echo time(); ?>" />
 
 </head>
+
 <body>
-   <nav class="navbar navbar-expand fixed-top">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="<?php echo base_url(); ?>">HealtHub</a>
-		</div>
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<nav class="navbar navbar-expand fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="<?php echo base_url(); ?>">HealtHub</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li class="dropdown">
 				<a id="dropdownMenuButton" href="#">Disease Wiki
@@ -38,5 +39,7 @@
 				<li class="active"><a id="underline" href="<?php echo base_url('auth') ?>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
+		</div>
+		
 	</div>
 </nav>

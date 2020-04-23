@@ -33,13 +33,18 @@
                                 ";
                     $subMenu = $this->db->query($querySubMenu)->result_array();
                     ?>
+
                     <ul class="nav flex-column">
                         <?php foreach ($subMenu as $sm) : ?>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= base_url($sm['url']); ?>">
-                                    <span data-feather="<?= $sm['icon']; ?>"></span>
-                                    <?= $sm['title']; ?>
-                                </a>
+                                <?php if ($title == $sm['title']) : ?>
+                                    <a class="nav-link active" href="<?= base_url($sm['url']); ?>">
+                                    <?php else : ?>
+                                        <a class="nav-link" href="<?= base_url($sm['url']); ?>">
+                                        <?php endif; ?>
+                                        <span data-feather="<?= $sm['icon']; ?>"></span>
+                                        <?= $sm['title']; ?>
+                                        </a>
                             </li>
                         <?php endforeach; ?>
                     </ul>

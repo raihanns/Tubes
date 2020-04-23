@@ -7,6 +7,7 @@ class Auth extends CI_Controller
     {
         parent::__construct();
         $this->load->library('form_validation');
+        $this->load->model('M_Auth');
     }
     public function index()
     {
@@ -27,9 +28,10 @@ class Auth extends CI_Controller
         $username = $this->input->post('username');
         $password = $this->input->post('password');
 
+        $found = $this->M_Auth->login($username, $password);
         $user = $this->db->get_where('user', ['username' => $username])->row_array();
-        if ($user) {
-            // usernya ada
+
+        if ($found) {
             if ($user['password'] == $password) {
                 $data = [
                     'email' => $user['email'],
@@ -88,8 +90,7 @@ class Auth extends CI_Controller
                 'date_created' => time()
             ];
 
-
-            $this->db->insert('user', $data);
+            $this->M_Auth->insertUser($data);
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Selamat! akun anda telah dibuat. Silahkan login</div>');
             redirect('auth');
         }
