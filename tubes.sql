@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 21, 2020 at 05:36 PM
+-- Generation Time: Apr 23, 2020 at 06:20 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -70,7 +70,8 @@ INSERT INTO `user_access_menu` (`id`, `role_id`, `menu_id`) VALUES
 (1, 1, 1),
 (2, 1, 2),
 (3, 2, 2),
-(4, 1, 3);
+(6, 2, 3),
+(7, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -137,7 +138,9 @@ INSERT INTO `user_sub_menu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active
 (3, 2, 'Edit Profile', 'user/edit', 'edit', 1),
 (4, 3, 'Menu Management', 'menu', 'menu', 1),
 (5, 3, 'Submenu Management', 'menu/submenu', 'folder', 1),
-(6, 1, 'Data Rumah Sakit', 'menu/tes', 'hard-drive', 1);
+(6, 1, 'Data Rumah Sakit', 'menu/tes', 'hard-drive', 1),
+(7, 4, 'tes', 'tes', 'tes', 1),
+(8, 1, 'Role', 'admin/role', 'sliders', 1);
 
 --
 -- Indexes for dumped tables
@@ -187,7 +190,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user_access_menu`
 --
 ALTER TABLE `user_access_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `user_menu`
@@ -205,7 +208,7 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `user_sub_menu`
 --
 ALTER TABLE `user_sub_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
