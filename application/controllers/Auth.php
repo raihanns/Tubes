@@ -104,4 +104,14 @@ class Auth extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Logout berhasil!</div>');
         redirect('auth');
     }
+
+    public function blocked()
+    {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['title'] = 'TIDAK MEMILIKI AKSES!';
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar');
+        $this->load->view('auth/blocked');
+        $this->load->view('templates/footer', $data);
+    }
 }

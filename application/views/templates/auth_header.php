@@ -98,7 +98,7 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-expand fixed-top">
+	<nav class="navbar navbar-expand fixed-top mb">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="<?php echo base_url(); ?>">HealtHub</a>
