@@ -14,9 +14,8 @@ class User extends CI_Controller
     {
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $data['title'] = 'Dashboard';
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar');
-        $this->load->view('user/index', $data);
+        $this->load->view('templates/headeruser', $data);
+        $this->load->view('Main', $data);
         $this->load->view('templates/footer');
     }
 
@@ -29,4 +28,5 @@ class User extends CI_Controller
         $this->load->view('user/listmembers', $data);
         $this->load->view('templates/footer');
     }
+
 }
