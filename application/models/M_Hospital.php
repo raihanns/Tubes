@@ -8,12 +8,12 @@ class M_Hospital extends CI_model
     return $this->db->get('hospital')->result_array();
   }
 
-  public function insertHosppital($data)
+  public function insertHospital($data)
   {
     return $this->db->insert('hospital', $data);
   }
 
-  public function editHosppital($id)
+  public function editHospital($id)
   {
     $data = [
       'id' => $this->input->post('id'),
@@ -26,13 +26,13 @@ class M_Hospital extends CI_model
     $this->db->update('hospital', $data);
   }
 
-  public function deleteHosppital($id)
+  public function deleteHospital($id)
   {
     $this->db->where('id', $id);
     $this->db->delete('hospital');
   }
 
-  public function getHosppitalById($id)
+  public function getHospitalById($id)
   {
     $this->db->where('id', $id);
     return $this->db->get('hospital')->row_array();

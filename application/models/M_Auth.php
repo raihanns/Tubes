@@ -29,7 +29,6 @@ class M_Auth extends CI_model
     $data = [
       'nama_depan' => $this->input->post('nama_depan', true),
       'nama_belakang' => $this->input->post('nama_belakang', true),
-      'username' => $this->input->post('username'),
       'email' => $this->input->post('email', true),
       'password' => $this->input->post('password'),
       'image' => 'default.jpg'
