@@ -13,7 +13,7 @@ class Main extends CI_Controller {
 		$data['title'] = 'HealtHub, Your Medical Healthcare';
 		$this->load->view('templates/auth_header',$data);
 		$this->load->view('Main');
-		$this->load->view('templates/footer');
+		$this->load->view('templates/auth_footer');
 
 	}
 }
