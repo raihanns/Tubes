@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2020 at 09:17 AM
+-- Generation Time: Apr 24, 2020 at 09:24 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `hospital` (
+  `id` int(2) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `alamat` text NOT NULL,
   `spesialis` varchar(50) NOT NULL,
@@ -39,8 +40,8 @@ CREATE TABLE `hospital` (
 -- Dumping data for table `hospital`
 --
 
-INSERT INTO `hospital` (`nama`, `alamat`, `spesialis`, `jumlah_kamar`) VALUES
-('Telkomedika', 'Telkom University', 'Umum', 5);
+INSERT INTO `hospital` (`id`, `nama`, `alamat`, `spesialis`, `jumlah_kamar`) VALUES
+(1, 'Telkomedika', 'Telkom University', 'Umum', 7);
 
 -- --------------------------------------------------------
 
@@ -167,6 +168,12 @@ INSERT INTO `user_sub_menu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active
 --
 
 --
+-- Indexes for table `hospital`
+--
+ALTER TABLE `hospital`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -199,6 +206,12 @@ ALTER TABLE `user_sub_menu`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `hospital`
+--
+ALTER TABLE `hospital`
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `user`
