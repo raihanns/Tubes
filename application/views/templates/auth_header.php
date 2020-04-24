@@ -31,7 +31,7 @@
 						<li><a href="#">Bakteri</a></li>
 					</ul>
 				</li>
-				<li><a href="<?php echo base_url('hospital/index') ?>">Hospitals</a></li>
+				<li><a href="<?php echo base_url('Hospital') ?>">Hospitals</a></li>
 				<li><a href="<?php echo base_url('about/index') ?>">About Us</a></li>
 			</ul>
 			<ul class="nav navbar-nav ml-auto">

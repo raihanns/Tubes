@@ -1,124 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    <style>
-        #box1 {
-            position: absolute;
-            top: 50px;
-            right: 0;
-            left: 0;
-            height: 550px;
-            width: 100%;
-            background-image : url('../assets/images/home1.jpg');
-            background-size: 100% ;
-            filter: contrast(80%);
-        }
-        #box2{
-            position: absolute;
-            top: 450px;
-            right: 0;
-            left: 0;
-            height: 100px;
-            width: 100%;
-            background-color: black;
-            opacity:70%;
-        }
-        #box3{
-            position: absolute;
-            top: 1350px;
-            right: 0;
-            left: 0;
-            height: 300px;
-            width: 100%;
-            background-color: #FFE600;
-        }
-        h1{
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 54px;
-            color: white;
-            text-align:center;
+body {
+  font-family: Arial;
+  font-size: 17px;
+}
 
-        }
-        h2{
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 36px;
-            text-align: center;
+.DaftarRS {
+  position: absolute;
+  top: 850px;
+  right: 0; 
+  left: 0;
+  height: 100px;
+  width: 100%;
+  
+}
 
-            color: #000000;
-        }
-        h3{
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 22px;
-            text-align: center;
+.HeaderRS {
+  position: relative;
+  width: 100%;
+  height: 500px; 
+  margin: 0 auto;
+  vertical-align: middle;
+}
 
-            color: #000000;
-        }
-        .carousel-inner img {
-            width: 100%;
-            height: 700px;
-        }
-    </style>
+.txtHeader {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  top:400px;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.7); /* Black background with 0.5 opacity */
+  color: white;
+  width: 100%;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
 
-	</head>
-
-	<body>
-    <div id="box1">
-        <div class="container">
-            <div class="row align-items-center">
-                <div id="box2"></div>
-                <div class="col-2"></div>
-                <div class="col-8">
-                    <h1 style="padding-top: 180px;">Tubes Webpro Asw Terdepan disegala situesyen</h1>
-                    <h1 style="padding-top: 150px;">Berita Terkini</h1>
-                </div>
-                <div class="col-2"></div>
-            </div>
+<div class="HeaderRS">
+    <div class="row align-items-center">
+        <img src="gambar/Hospitals.jpg" alt="Hospitals" style="width:100%;">
+        <div class="txtHeader">
+            <h1>DAFTAR RUMAH SAKIT</h1>
         </div>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col">
-                    <div id="demo" style="padding-top:70px;" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                        <ul class="carousel-indicators">
-                            <li data-target="#demo" data-slide-to="0" class="active"></li>
-                            <li data-target="#demo" data-slide-to="1"></li>
-                            <li data-target="#demo" data-slide-to="2"></li>
-                        </ul>
-                    <!-- The slideshow -->
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="../assets/images/home1.jpg" alt="Los Angeles">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="../assets/images/background1.jpg" alt="Chicago">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="../assets/images/background.jpg" alt="New York">
-                            </div>
-                        </div>
-                    <!-- Left and right controls -->
-                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                        </a>
-                        <a class="carousel-control-next" href="#demo" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        </a>
-                    </div>
+    </div>
+</div>
+
+
+   <div class="DaftarRS">
+
+    <hr class="my-4">
+
+    <!--Carousel Wrapper-->
+    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+      <!--Controls-->
+      <div class="controls-top">
+        <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+        <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+      </div>
+      <!--/.Controls-->
+
+      <!--Indicators-->
+      <ol class="carousel-indicators">
+        <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+        <li data-target="#multi-item-example" data-slide-to="1"></li>
+        <li data-target="#multi-item-example" data-slide-to="2"></li>
+      </ol>
+      <!--/.Indicators-->
+
+      <!--Slides-->
+      <div class="carousel-inner" role="listbox">
+
+        <!--First slide-->
+        <div class="carousel-item active">
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-2">
+                <img class="card-img-top" src="gambar/rshermina.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">RS Hermina</h4>
+                  <a class="btn btn-primary">Daftar Rujukan</a>
                 </div>
+              </div>
             </div>
-            <div class="row align-items-center">
-                <div id="box3"></div>
-                    <div class="col-2"><img src="../assets/images/kutip1.png"></div>
-                    <div class="col-8">
-                        <h2 style="padding-top: 100px;">Tips Jaga Kesehatan</h2>
-                        <h3 style="padding-top: 10px;">Cuci tangan</h3>
-                    </div>
-                <div class="col-2"><img style="padding-top:250px; padding-left:100px;" src="../assets/images/kutip2.png"></div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" src="gambar/rspertamina.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">RS Pertamina</h4>
+                  <a class="btn btn-primary">Daftar Rujukan</a>
+                </div>
+              </div>
             </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" src="gambar/rspersahabatan.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">RS Persahabatan</h4>
+                  <a class="btn btn-primary">Daftar Rujukan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
-	</body>
+        <!--/.First slide-->
+
+        <!--Second slide-->
+        <div class="carousel-item">
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-2">
+                <img class="card-img-top" src="gambar/rshermina.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">RS Hermina</h4>
+                  <a class="btn btn-primary">Daftar Rujukan</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" src="gambar/rsjakarta.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">RS Jakarta</h4>
+                  <a class="btn btn-primary">Daftar Rujukan</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" src="gambar/rspersahabatan.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">RS Persahabatan</h4>
+                 <a class="btn btn-primary"> Daftar Rujukan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--/.Second slide-->
+
+        <!--Third slide-->
+        
+        <!--/.Third slide-->
+
+      </div>
+      <!--/.Slides-->
+
+    </div>
+    <!--/.Carousel Wrapper-->
+
+
+  </div>
+</body>
 </html>

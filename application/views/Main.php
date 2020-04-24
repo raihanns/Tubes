@@ -110,6 +110,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="row align-items-center">
                 <div id="box3"></div>
                     <div class="col-2"><img src="assets/images/kutip1.png"></div>
