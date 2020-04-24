@@ -40,11 +40,9 @@
       }
       /* footer */
       h5{
-          font-size: 13px;
+        font-size: 13px;
       }
-      .page-footer{
-        padding-top:15px;
-      }
+
     </style>
     <title><?= $title ?></title>
 	</head>

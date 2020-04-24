@@ -23,6 +23,7 @@
 				<a class="navbar-brand" href="<?php echo base_url(); ?>">HealtHub</a>
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
 			<ul class="nav navbar-nav">
 				<li class="dropdown">
 				<a id="dropdownMenuButton" href="#">Disease Wiki
@@ -39,7 +40,22 @@
 				<li class="active"><a id="underline" href="<?php echo base_url('auth') ?>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
+
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+					<a id="dropdownMenuButton" href="#">Disease Wiki
+						<ul class="dropdown-menu">
+							<li><a href="#">Virus</a></li>
+							<li><a href="#">Bakteri</a></li>
+						</ul>
+					</li>
+					<li><a href="<?php echo base_url('hospital/index') ?>">Hospitals</a></li>
+					<li><a href="<?php echo base_url('about/index') ?>">About Us</a></li>
+				</ul>
+				<ul class="nav navbar-nav ml-auto">
+					<li><a id="contact" href="<?php echo base_url('contact/index') ?>"><button class="get-happier" id="bcontact" type="button">Contact Us</button></a></li>
+					<li class="active"><a id="underline" href="<?php echo base_url('auth') ?>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
 		</div>
-		
-	</div>
-</nav>
+	</nav>

@@ -91,7 +91,7 @@
     /* --------------------------------BOTTOM-------------------------- */
     .bottom {
         background-color: black;
-        height: 200px;
+        height: 130px;
         margin-top: 100px;
         color: white;
     }
@@ -99,6 +99,7 @@
     .customer h1 {
         font-size: 20px;
         padding-left: 400px;
+        padding-top: 10px;
         width: 100%;
         align-items: center;
         text-align: center;
