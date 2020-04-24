@@ -16,7 +16,7 @@ class hospital extends CI_Controller {
 		$data['title'] = 'Hospitals';
 		$this->load->view('templates/auth_header',$data);
 		$this->load->view('Hospital');
-		$this->load->view('templates/footer');
+		$this->load->view('templates/auth_footer');
 	}
 
 
