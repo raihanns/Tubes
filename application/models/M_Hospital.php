@@ -15,15 +15,16 @@ class M_Hospital extends CI_model
 
   public function editHospital($id)
   {
-    $data = [
-      'id' => $this->input->post('id'),
-      'nama' => $this->input->post('nama'),
-      'alamat' => $this->input->post('alamat'),
-      'spesialis' => $this->input->post('spesialis'),
-      'jumlah_kamar' => $this->input->post('jumlah_kamar')
-    ];
-    $this->db->where('id', $id);
-    $this->db->update('hospital', $data);
+        // $id = $this->input->post('id', true);
+        // $this->db->where('id', $id)->update('data', ['data' => $data]);
+        $data = [
+          'id' => $this->input->post('id'),
+          'nama' => $this->input->post('nama'),
+          'alamat' => $this->input->post('alamat'),
+          'slot' => $this->input->post('slot')
+        ];
+     $this->db->where('id', $id);
+     $this->db->update('hospital', $data);
   }
 
   public function deleteHospital($id)
