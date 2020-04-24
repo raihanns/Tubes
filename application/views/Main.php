@@ -1,7 +1,7 @@
 
     <style>
         #box1 {
-            position: absolute;
+            margin-bottom:1250px;
             top: 50px;
             right: 0;
             left: 0;
@@ -22,12 +22,8 @@
             opacity:70%;
         }
         #box3{
-            position: absolute;
-            top: 1350px;
-            right: 0;
-            left: 0;
-            height: 300px;
             width: 100%;
+            height: 300px;
             background-color: #FFE600;
         }
         h1{
@@ -68,7 +64,7 @@
 	<body>
     <div id="box1">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-start">
                 <div id="box2"></div>
                 <div class="col-2"></div>
                 <div class="col-8">
@@ -77,30 +73,55 @@
                 </div>
                 <div class="col-2"></div>
             </div>
-        </div>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col">
+            <div class="row align-items-center" style="margin-bottom:100px;">
+                <div class="col-12">
                     <div id="demo" style="padding-top:70px;" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
+                        <!-- Indicators -->
                         <ul class="carousel-indicators">
                             <li data-target="#demo" data-slide-to="0" class="active"></li>
                             <li data-target="#demo" data-slide-to="1"></li>
                             <li data-target="#demo" data-slide-to="2"></li>
                         </ul>
-                    <!-- The slideshow -->
+                        <!-- The slideshow -->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="assets/images/home1.jpg" alt="Los Angeles">
+                                <div class="card" >
+                                    <img class="card-img-top" src="assets/images/home1.jpg"
+                                    alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Card title</h4>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                            card's content.</p>
+                                        <a class="btn btn-primary">Button</a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/images/background1.jpg" alt="Chicago">
+                                <div class="card" >
+                                    <img class="card-img-top" src="assets/images/background1.jpg"
+                                    alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Card title</h4>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                            card's content.</p>
+                                        <a class="btn btn-primary">Button</a>
+                                    </div>
+                                </div>                                
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/images/background.jpg" alt="New York">
+                                <div class="card" >
+                                    <img class="card-img-top" src="assets/images/background.jpg"
+                                    alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Card title</h4>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                            card's content.</p>
+                                        <a class="btn btn-primary">Button</a>
+                                    </div>
+                                </div>                                
                             </div>
                         </div>
-                    <!-- Left and right controls -->
+                        <!-- Left and right controls -->
                         <a class="carousel-control-prev" href="#demo" data-slide="prev">
                         <span class="carousel-control-prev-icon"></span>
                         </a>
@@ -110,15 +131,13 @@
                     </div>
                 </div>
             </div>
-            <div class="row align-items-center">
-                <div id="box3"></div>
-                    <div class="col-2"><img src="assets/images/kutip1.png"></div>
-                    <div class="col-8">
-                        <h2 style="padding-top: 100px;">Tips Jaga Kesehatan</h2>
-                        <h3 style="padding-top: 10px;">Cuci tangan</h3>
-                    </div>
-                <div class="col-2"><img style="padding-top:250px; padding-left:100px;" src="assets/images/kutip2.png"></div>
-            </div>
         </div>
-	</body>
-</html>
+        <div id="box3">
+            <img style="padding-top: 30px; padding-left:10%;" src="assets/images/kutip1.png">
+            <h2 style="padding-top: 10px;">Tips Jaga Kesehatan</h2>
+            <h3>Cuci tangan</h3>
+            <img style="padding-top: 10px; padding-left:85%;" src="assets/images/kutip2.png">
+        </div>
+    </div>
+
+
