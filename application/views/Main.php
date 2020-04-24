@@ -132,16 +132,6 @@
                 </div>
             </div>
             
-            <div class="row align-items-center">
-                <div id="box3"></div>
-                    <div class="col-2"><img src="assets/images/kutip1.png"></div>
-                    <div class="col-8">
-                        <h2 style="padding-top: 100px;">Tips Jaga Kesehatan</h2>
-                        <h3 style="padding-top: 10px;">Cuci tangan</h3>
-                    </div>
-                <div class="col-2"><img style="padding-top:250px; padding-left:100px;" src="assets/images/kutip2.png"></div>
-            </div>
-
         </div>
         <div id="box3">
             <img style="padding-top: 30px; padding-left:10%;" src="assets/images/kutip1.png">
