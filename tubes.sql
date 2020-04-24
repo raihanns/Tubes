@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2020 at 09:24 AM
+-- Generation Time: Apr 24, 2020 at 08:14 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -29,19 +29,32 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `hospital` (
-  `id` int(2) NOT NULL,
+  `id` int(11) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `alamat` text NOT NULL,
-  `spesialis` varchar(50) NOT NULL,
-  `jumlah_kamar` int(11) NOT NULL
+  `slot` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `hospital`
 --
 
-INSERT INTO `hospital` (`id`, `nama`, `alamat`, `spesialis`, `jumlah_kamar`) VALUES
-(1, 'Telkomedika', 'Telkom University', 'Umum', 7);
+INSERT INTO `hospital` (`id`, `nama`, `alamat`, `slot`) VALUES
+(0, 'RS', 'Jl. H Wahid no.31', 1),
+(1, 'Telkomedika', 'Telkom University', 5);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `news`
+--
+
+CREATE TABLE `news` (
+  `id` int(11) NOT NULL,
+  `title` varchar(50) NOT NULL,
+  `isi` text NOT NULL,
+  `foto` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -89,10 +102,11 @@ CREATE TABLE `user_access_menu` (
 
 INSERT INTO `user_access_menu` (`id`, `role_id`, `menu_id`) VALUES
 (1, 1, 1),
-(2, 1, 2),
 (3, 2, 2),
-(6, 2, 3),
-(7, 1, 3);
+(8, 1, 2),
+(12, 2, 5),
+(13, 1, 5),
+(14, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -113,7 +127,8 @@ INSERT INTO `user_menu` (`id`, `menu`) VALUES
 (1, 'Admin'),
 (2, 'User'),
 (3, 'Menu'),
-(4, '123');
+(4, '123'),
+(5, 'Appointment');
 
 -- --------------------------------------------------------
 
@@ -159,9 +174,10 @@ INSERT INTO `user_sub_menu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active
 (3, 2, 'Edit Profile', 'user/edit', 'edit', 1),
 (4, 3, 'Menu Management', 'menu', 'menu', 1),
 (5, 3, 'Submenu Management', 'menu/submenu', 'folder', 1),
-(6, 1, 'Data Rumah Sakit', 'menu/tes', 'hard-drive', 1),
+(6, 1, 'Data Rumah Sakit', 'admin/listhospital', 'hard-drive', 1),
 (7, 4, 'tes', 'tes', 'tes', 1),
-(8, 1, 'Role', 'admin/role', 'sliders', 1);
+(8, 1, 'Role', 'admin/role', 'sliders', 1),
+(9, 5, 'Medical Appointment', 'tes', 'alert-circle', 1);
 
 --
 -- Indexes for dumped tables
@@ -171,6 +187,12 @@ INSERT INTO `user_sub_menu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active
 -- Indexes for table `hospital`
 --
 ALTER TABLE `hospital`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `news`
+--
+ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -211,7 +233,13 @@ ALTER TABLE `user_sub_menu`
 -- AUTO_INCREMENT for table `hospital`
 --
 ALTER TABLE `hospital`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `news`
+--
+ALTER TABLE `news`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -223,13 +251,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user_access_menu`
 --
 ALTER TABLE `user_access_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `user_menu`
 --
 ALTER TABLE `user_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `user_role`
@@ -241,7 +269,7 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `user_sub_menu`
 --
 ALTER TABLE `user_sub_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
