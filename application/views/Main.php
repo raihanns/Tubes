@@ -57,9 +57,6 @@
 
             color: #000000;
         }
-        .page-footer{
-            padding-top: 65px;
-        }
         .carousel-inner img {
             width: 100%;
             height: 700px;
