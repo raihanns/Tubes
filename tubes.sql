@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 23, 2020 at 06:20 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.3
+-- Generation Time: Apr 24, 2020 at 09:17 AM
+-- Server version: 10.4.10-MariaDB
+-- PHP Version: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `tubes`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hospital`
+--
+
+CREATE TABLE `hospital` (
+  `nama` varchar(50) NOT NULL,
+  `alamat` text NOT NULL,
+  `spesialis` varchar(50) NOT NULL,
+  `jumlah_kamar` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `hospital`
+--
+
+INSERT INTO `hospital` (`nama`, `alamat`, `spesialis`, `jumlah_kamar`) VALUES
+('Telkomedika', 'Telkom University', 'Umum', 5);
 
 -- --------------------------------------------------------
 
