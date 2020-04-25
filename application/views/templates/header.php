@@ -14,8 +14,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
 	<link href="<?= base_url('assets/css/blog-post.css'); ?>" rel="stylesheet">
-	<link type="text/css" rel="stylesheet" href="<?= base_url('assets/css/style.css?d=');
-													echo time(); ?>" />
+	<link type="text/css" rel="stylesheet" href="<?= base_url('assets/css/style.css?d='); echo time(); ?>" />
 
 </head>
 
@@ -66,54 +65,3 @@
 			document.getElementById("pagenya").style.marginLeft = "0";
 		}
 	</script>
-
-
-	<!-- modal edit profil -->
-
-	
-
-	<!-- modal medical appointment -->
-
-	<div class="modal" id="medapp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h4 class="modal-title" id="exampleModalLabel">Medical Appointment</h4>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<!-- isi form ini -->
-					<form method="post" action="  ">
-						<div class="col-12">
-							<p id="brand" style="color:black; padding-top:10px;">HealtHub</p>
-						</div>
-						<div class="form-group">
-							<label for="formGroupExampleInput">Rumah Sakit</label>
-							<select class="form-control" id="formGroupExampleInput2" name="rumahsakit" required>
-								<option value="" selected></option>
-								<?php foreach ($dataJ as $c) { ?>
-									<option value=""></option>
-								<?php } ?>
-							</select>
-						</div>
-						<div class="form-group">
-							<label for="formGroupExampleInput">Jam</label>
-							<select class="form-control" id="formGroupExampleInput2" name="jam" required>
-								<option value="" selected></option>
-								<?php foreach ($dataJ as $c) { ?>
-									<option value=""></option>
-								<?php } ?>
-							</select>
-						</div>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
-					<input type="submit" class="btn btn-primary" id="hapus" value="Submit" placeholder="Simpan">
-				</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	</div>
