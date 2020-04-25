@@ -15,9 +15,20 @@ class M_Menu extends CI_Model
         return $this->db->query($query)->result_array();
     }
 
+    public function getMenu()
+    {
+        return $this->db->get('user_menu')->result_array();
+    }
+
     public function deleteMenu($id)
     {
         $this->db->where('id', $id);
         $this->db->delete('user_menu');
+    }
+
+    public function deleteSubMenu($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('user_sub_menu');
     }
 }
