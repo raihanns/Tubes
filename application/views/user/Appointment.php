@@ -24,7 +24,10 @@
                         <div class="col-sm-6">
                             <label for="rumahsakit">Rumah Sakit</label>
                             <select name="rumah_sakit" id="rumahsakit">
-
+                              <option selected="selected">Choose one</option>
+                              <?phpforeach($rs as $item){ ?>
+                                <option value="<?php echo strtolower($item); ?>"><?php echo $item; ?></option>
+                                <?php } ?>
                             </select>
                         </div>
                         <div class="col-sm-6">
