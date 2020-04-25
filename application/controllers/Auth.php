@@ -149,4 +149,5 @@ class Auth extends CI_Controller
           $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Appointment sudah dibuat</div>');
           redirect('auth');
     }
+  }
 }
