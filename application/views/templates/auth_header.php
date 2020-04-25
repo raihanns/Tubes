@@ -3,16 +3,15 @@
 
 <head>
 
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?= $title ?></title>
-    <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>"/>
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title><?= $title ?></title>
+	<link type="text/css" rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>" />
 	<script src="<?php echo base_url('assets/js/jquery-3.2.1.min.js'); ?>"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-	<link type="text/css" rel="stylesheet" href="<?= base_url('assets/css/style.css?d='); echo time(); ?>" />
+
+	<link type="text/css" rel="stylesheet" href="<?= base_url('assets/css/style.css?d='); ?>" />
+	<link href="<?= base_url('assets/css/blog-post.css'); ?>" rel="stylesheet">
 
 </head>
 
@@ -25,14 +24,15 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li class="dropdown">
-					<a id="dropdownMenuButton" href="#">Disease Wiki
-						<ul class="dropdown-menu">
-							<li><a href="#">Virus</a></li>
-							<li><a href="#">Bakteri</a></li>
-						</ul>
+						<a id="dropdownMenuButton" href="#">Disease Wiki
+							<ul class="dropdown-menu">
+								<li><a href="#">Virus</a></li>
+								<li><a href="#">Bakteri</a></li>
+							</ul>
 					</li>
 					<li><a href="<?php echo base_url('Hospital') ?>">Hospitals</a></li>
 					<li><a href="<?php echo base_url('about/index') ?>">About Us</a></li>
+					<li><a href="<?php echo base_url('news/index') ?>">News</a></li>
 				</ul>
 				<ul class="nav navbar-nav ml-auto">
 					<li><a id="contact" href="<?php echo base_url('contact/index') ?>"><button class="get-happier" id="bcontact" type="button">Contact Us</button></a></li>

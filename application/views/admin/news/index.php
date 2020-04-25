@@ -7,7 +7,7 @@
             <?= validation_errors(); ?>
         </div>
     <?php endif; ?>
-    <?= $this->session->flashdata('message'); ?>
+    
     <form action="<?= base_url('admin/news/'); ?>" method="POST">
         <div class="form-group">
             <label for="exampleFormControlInput1">Judul</label>
