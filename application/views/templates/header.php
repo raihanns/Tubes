@@ -29,8 +29,8 @@
 					<li class="dropdown">
 						<a id="dropdownMenuButton" href="#">Disease Wiki
 							<ul class="dropdown-menu">
-								<li><a href="#">Virus</a></li>
-								<li><a href="#">Bakteri</a></li>
+								<li><a href="<?php echo base_url('Virus/index') ?>">Virus</a></li>
+								<li><a href="<?php echo base_url('Bakteri/index') ?>">Bakteri</a></li>
 							</ul>
 					</li>
 					<li><a href="<?php echo base_url('Hospital') ?>">Hospitals</a></li>
