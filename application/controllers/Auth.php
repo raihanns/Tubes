@@ -11,15 +11,22 @@ class Auth extends CI_Controller
     }
     public function index()
     {
-        $this->form_validation->set_rules('username', 'Username', 'required|trim');
-        $this->form_validation->set_rules('password', 'Password', 'required|trim');
-        if ($this->form_validation->run() == FALSE) {
-            $data['title'] = 'User Login';
-            // $this->load->view('templates/auth_header', $data);
-            $this->load->view('auth/login',$data);
-            $this->load->view('templates/auth_footer');
-        } else {
-            $this->_login();
+        if($this->session->userdata('email')) {
+            $this->session->unset_userdata('email');
+            $this->session->unset_userdata('role_id');
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Anda Terlogout Otomatis Karena Sudah Login Sebelumnya</div>');
+			redirect('auth');
+	  	}else{
+            $this->form_validation->set_rules('username', 'Username', 'required|trim');
+            $this->form_validation->set_rules('password', 'Password', 'required|trim');
+            if ($this->form_validation->run() == FALSE) {
+                $data['title'] = 'User Login';
+                // $this->load->view('templates/auth_header', $data);
+                $this->load->view('auth/login',$data);
+                $this->load->view('templates/auth_footer');
+            } else {
+                $this->_login();
+            }
         }
     }
 
