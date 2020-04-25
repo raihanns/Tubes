@@ -46,7 +46,7 @@
 						</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+				<a href="<?php echo base_url() ?>/user"><button type="button" class="btn btn-secondary" >Tidak</button></a>
 					<input type="submit" class="btn btn-primary" id="hapus" value="Submit" placeholder="Simpan">
 				</div>
 				</form>

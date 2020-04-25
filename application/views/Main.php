@@ -73,7 +73,7 @@
                 <div id="box2"></div>
                 <div class="col-2"></div>
                 <div class="col-8">
-                    <h1 style="padding-top: 180px;">Tubes Webpro Asw Terdepan disegala situesyen</h1>
+                    <h1 style="padding-top: 180px;">Dengan Kami Semua Sehat Semua Bahagia</h1> 
                     <h1 style="padding-top: 150px;">Berita Terkini</h1>
                 </div>
                 <div class="col-2"></div>

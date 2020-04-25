@@ -44,9 +44,12 @@ class User extends CI_Controller
 
     public function appointment()
     {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $data['rs'] = $this->M_Hospital->getAllHospital();
         $data['title'] = 'Appointment Rumah Sakit';
         $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('Main', $data);
         $this->load->view('user/Appointment', $data);
         $this->load->view('templates/footer', $data);
     }
