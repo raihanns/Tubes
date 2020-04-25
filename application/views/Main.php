@@ -7,7 +7,7 @@
             left: 0;
             height: 550px;
             width: 100%;
-            background-image : url('assets/images/home1.jpg');
+            background-image : url('<?php echo base_url() ?>/assets/images/home1.jpg');
             background-size: 100% ;
             filter: contrast(80%);
         }
@@ -86,7 +86,7 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="card" >
-                                    <img class="card-img-top" src="assets/images/home1.jpg"
+                                    <img class="card-img-top" src="<?php echo base_url() ?>/assets/images/home1.jpg"
                                     alt="Card image cap">
                                     <div class="card-body">
                                         <h4 class="card-title">Card title</h4>
@@ -98,7 +98,7 @@
                             </div>
                             <div class="carousel-item">
                                 <div class="card" >
-                                    <img class="card-img-top" src="assets/images/background1.jpg"
+                                    <img class="card-img-top" src="<?php echo base_url() ?>/assets/images/background1.jpg"
                                     alt="Card image cap">
                                     <div class="card-body">
                                         <h4 class="card-title">Card title</h4>
@@ -110,7 +110,7 @@
                             </div>
                             <div class="carousel-item">
                                 <div class="card" >
-                                    <img class="card-img-top" src="assets/images/background.jpg"
+                                    <img class="card-img-top" src="<?php echo base_url() ?>/assets/images/background.jpg"
                                     alt="Card image cap">
                                     <div class="card-body">
                                         <h4 class="card-title">Card title</h4>
@@ -134,10 +134,10 @@
             
         </div>
         <div id="box3">
-            <img style="padding-top: 30px; padding-left:10%;" src="assets/images/kutip1.png">
+            <img style="padding-top: 30px; padding-left:10%;" src="<?php echo base_url() ?>/assets/images/kutip1.png">
             <h2 style="padding-top: 10px;">Tips Jaga Kesehatan</h2>
             <h3>Cuci tangan</h3>
-            <img style="padding-top: 10px; padding-left:85%;" src="assets/images/kutip2.png">
+            <img style="padding-top: 10px; padding-left:85%;" src="<?php echo base_url() ?>/assets/images/kutip2.png">
         </div>
     </div>
 

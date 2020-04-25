@@ -9,7 +9,6 @@ class User extends CI_Controller
         is_logged_in();
     }
 
-
     public function index()
     {
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
@@ -27,6 +26,17 @@ class User extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar');
         $this->load->view('user/listmembers', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function edit()
+    {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['title'] = 'Edit Profil';
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('Main', $data);
+        $this->load->view('user/edit');
         $this->load->view('templates/footer');
     }
 
