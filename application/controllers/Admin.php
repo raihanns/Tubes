@@ -8,6 +8,7 @@ class Admin extends CI_Controller
     {
         parent::__construct();
         $this->load->model('M_Hospital');
+        $this->load->model('M_News');
         is_logged_in();
     }
 
@@ -80,6 +81,32 @@ class Admin extends CI_Controller
         }
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Akses berhasil diubah!</div>');
     }
+
+    public function news()
+    {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['title'] = 'Isi Berita';
+
+        $this->form_validation->set_rules('judul', 'Judul', 'required');
+        $this->form_validation->set_rules('isi', 'Isi', 'required');
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('templates/sidebar', $data);
+            $this->load->view('admin/news/index', $data);
+            $this->load->view('templates/footer', $data);
+        } else {
+            $data = [
+                'judul' => $this->input->post('judul'),
+                'isi' => $this->input->post('isi'),
+                'foto' => 'default.jpg'
+            ];
+            $this->M_News->insertNews($data);
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Berita berhasil ditambah!</div>');
+            redirect('admin/news');
+        }
+    }
+
 
     public function listHospital()
     {
