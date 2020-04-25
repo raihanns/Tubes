@@ -122,32 +122,5 @@ class Auth extends CI_Controller
         $this->load->view('templates/footer', $data);
     }
 
-    public function appointment()
-    {
-        $data['rs'] = $this->db->get_where('Hospital', ['nama' => $this->session->userdata('nama')])->row_array();
-        $data['title'] = 'Appointment Rumah Sakit';
-        $this->load->view('templates/header', $data);
-        $this->load->view('user/Appointment', $data);
-        $this->load->view('templates/footer', $data);
-    }
-
-    public function insertAppointment()
-    {
-      if ($this->form_validation->run() == FALSE) {
-          $data['title'] = 'Appointment Rumah Sakit';
-          $this->load->view('templates/header', $data);
-          $this->load->view('user/Appointment', $data);
-          $this->load->view('templates/footer', $data);
-      } else {
-          $data = [
-              'nama_depan' => $this->input->post('nama_depan'),
-              'nama_belakang' => $this->input->post('nama_belakang'),
-              'hospital' => $this->input->post('rumahsakit'),
-              'tanggal' => $this->input->post('datepicker')
-          ];
-          $this->M_Auth->insertAppointment($data);
-          $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Appointment sudah dibuat</div>');
-          redirect('auth');
-    }
-  }
+    
 }

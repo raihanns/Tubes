@@ -12,7 +12,7 @@
     <div id="registerbg" class="row">
         <div class="col-6"></div>
         <div class="col-6 " id="boxformlogin">
-            <form id="formregister" action="<?= site_url('auth/insertAppointment') ?>" method="post">
+            <form id="formregister" action="<?= site_url('User/insertAppointment') ?>" method="post">
                 <h2>Appointment</h2>
 
                 <div class="form-group">
@@ -30,13 +30,13 @@
                             <select name="rumah_sakit" id="rumahsakit">
                                 <option selected="selected">Choose one</option>
                                 <?php foreach ($rs as $item) { ?>
-                                    <option value="<?php echo strtolower($item); ?>"><?php echo $item; ?></option>
+                                    <option value="<?php echo strtolower($item['nama']); ?>"><?php echo $item['nama']; ?></option>
                                 <?php } ?>
                             </select>
                         </div>
                         <div class="col-sm-6">
-                            <label for="inputJam">Tanggal</label>
-                            <input id="datepicker" width="276" />
+                            <label for="inputtanggal">Tanggal</label>
+                            <input name="tanggal" id="datepicker" width="276" />
                             <script>
                                 $('#datepicker').datepicker({
                                     uiLibrary: 'bootstrap4'
