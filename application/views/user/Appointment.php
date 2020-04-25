@@ -2,6 +2,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="<?= base_url('assets/css/style.css?d=');
                                                     echo time(); ?>" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -24,15 +28,20 @@
                         <div class="col-sm-6">
                             <label for="rumahsakit">Rumah Sakit</label>
                             <select name="rumah_sakit" id="rumahsakit">
-                              <option selected="selected">Choose one</option>
-                              <?phpforeach($rs as $item){ ?>
-                                <option value="<?php echo strtolower($item); ?>"><?php echo $item; ?></option>
+                                <option selected="selected">Choose one</option>
+                                <?php foreach ($rs as $item) { ?>
+                                    <option value="<?php echo strtolower($item); ?>"><?php echo $item; ?></option>
                                 <?php } ?>
                             </select>
                         </div>
                         <div class="col-sm-6">
-                            <label for="inputJam">Input Jam</label>
-                            <input type="text" class="time" name="nama_belakang" value="<?= set_value('nama_belakang') ?>" required>
+                            <label for="inputJam">Tanggal</label>
+                            <input id="datepicker" width="276" />
+                            <script>
+                                $('#datepicker').datepicker({
+                                    uiLibrary: 'bootstrap4'
+                                });
+                            </script>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary button1">Submit</button>
