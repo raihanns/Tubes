@@ -61,8 +61,8 @@
 
 	</head>
 
-	<body>
-    <div id="box1">
+	<body id="pagenya">
+    <div id="box1" >
         <div class="container">
             <div class="row align-items-start">
                 <div id="box2"></div>

@@ -19,7 +19,7 @@ class Admin extends CI_Controller
         $data['title'] = 'Dashboard';
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar');
-        $this->load->view('admin/index', $data);
+        $this->load->view('Main', $data);
         $this->load->view('templates/footer');
     }
 

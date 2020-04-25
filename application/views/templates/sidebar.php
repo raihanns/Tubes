@@ -1,7 +1,36 @@
-<div class="container-fluid">
+<style>
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: -20px;
+  left: 0;
+  background-color: #272626;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 50px;
+}
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+</style>
+
+
+<div class="container-fluid ">
     <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-            <div class="sidebar-sticky">
+            <div id="mySidebar" class="sidebar" style="margin-top:80px;">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+                <div style="text-align:center;">
+                    <img src="<?php echo base_url() ?>/assets/images/avatar.png">
+                    <br></br>
+                    <h5 id="brand"> Ini Teks Nama</h5>
+                </div>
 
                 <!-- query menu -->
                 <?php
@@ -55,4 +84,3 @@
                 <a class="nav-link" href="<?= base_url('auth/logout'); ?>"><span data-feather="log-out"></span>Logout</a>
 
             </div>
-        </nav>
