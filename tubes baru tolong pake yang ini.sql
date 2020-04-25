@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2020 at 02:33 PM
+-- Generation Time: Apr 25, 2020 at 03:11 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -33,7 +33,7 @@ CREATE TABLE `appoitment` (
   `nama_depan` varchar(50) NOT NULL,
   `nama_belakang` varchar(50) NOT NULL,
   `hospital` varchar(50) NOT NULL,
-  `tanggal` date NOT NULL
+  `tanggal` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -42,7 +42,8 @@ CREATE TABLE `appoitment` (
 
 INSERT INTO `appoitment` (`id`, `nama_depan`, `nama_belakang`, `hospital`, `tanggal`) VALUES
 (1, 'Syamsul', 'Rizal', 'rs pertamina', '0000-00-00'),
-(2, 'Syamsul', 'Rizal', 'rs pertamina', '2020-04-14');
+(2, 'Syamsul', 'Rizal', 'rs pertamina', '2020-04-14'),
+(3, 'Syamsul', 'Rizal', 'rs persahabatan', '04/16/2020');
 
 -- --------------------------------------------------------
 
@@ -264,7 +265,7 @@ ALTER TABLE `user_sub_menu`
 -- AUTO_INCREMENT for table `appoitment`
 --
 ALTER TABLE `appoitment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `hospital`
