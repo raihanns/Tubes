@@ -16,10 +16,8 @@ class M_News extends CI_model
     public function editNews($id)
     {
         $data = [
-            'id' => $this->input->post('id'),
-            'nama' => $this->input->post('nama'),
-            'alamat' => $this->input->post('alamat'),
-            'slot' => $this->input->post('slot')
+            'judul' => $this->input->post('id'),
+            'isi' => $this->input->post('nama')
         ];
         $this->db->where('id', $id);
         $this->db->update('news', $data);

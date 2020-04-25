@@ -15,8 +15,6 @@ class M_Hospital extends CI_model
 
   public function editHospital($id)
   {
-        // $id = $this->input->post('id', true);
-        // $this->db->where('id', $id)->update('data', ['data' => $data]);
         $data = [
           'id' => $this->input->post('id'),
           'nama' => $this->input->post('nama'),
