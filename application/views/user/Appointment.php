@@ -24,16 +24,12 @@
                         <div class="col-sm-6">
                             <label for="rumahsakit">Rumah Sakit</label>
                             <select name="rumah_sakit" id="rumahsakit">
-                                <option value="RS Hermina">RS Hermina</option>
-                                <option value="RS Pertamina">RS Pertamina</option>
-                                <option value="RS Persahabatan">RS Persahabatan </option>
-                                <option value="RS Jakarta">RS Jakarta </option>
-                                <option value="RS Telkomedika">RS Telkomedika</option>
+
                             </select>
                         </div>
                         <div class="col-sm-6">
                             <label for="inputJam">Input Jam</label>
-                            <input type="text" class="form-control" name="nama_belakang" value="<?= set_value('nama_belakang') ?>" required>
+                            <input type="text" class="time" name="nama_belakang" value="<?= set_value('nama_belakang') ?>" required>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary button1">Submit</button>
