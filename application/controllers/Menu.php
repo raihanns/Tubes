@@ -36,12 +36,12 @@ class Menu extends CI_Controller
         }
     }
 
-    // public function deleteMenu()
-    // {
-    //     $this->M_Menu->deleteMenu($id);
-    //     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Menu berhasil dihapus!</div>');
-    //     redirect('menu');
-    // }
+    public function deleteMenu($id)
+    {
+        $this->M_Menu->deleteMenu($id);
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Menu berhasil dihapus!</div>');
+        redirect('menu');
+    }
 
 
 

@@ -122,12 +122,5 @@ class Auth extends CI_Controller
         $this->load->view('templates/footer', $data);
     }
 
-    public function appointment()
-    {
-        $data['rs'] = $this->db->get_where('Hospital', ['nama' => $this->session->userdata('nama')])->row_array();
-        $data['title'] = 'Appointment Rumah Sakit';
-        $this->load->view('templates/header', $data);
-        $this->load->view('user/Appointment', $data);
-        $this->load->view('templates/footer', $data);
-    }
+    
 }
