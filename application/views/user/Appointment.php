@@ -12,7 +12,7 @@
     <div id="registerbg" class="row">
         <div class="col-6"></div>
         <div class="col-6 " id="boxformlogin">
-            <form id="formregister" action="<?= site_url('auth/register') ?>" method="post">
+            <form id="formregister" action="<?= site_url('auth/insertAppointment') ?>" method="post">
                 <h2>Appointment</h2>
 
                 <div class="form-group">

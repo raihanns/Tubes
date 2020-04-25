@@ -48,4 +48,10 @@ class M_Auth extends CI_model
     $this->db->where('id', $id);
     return $this->db->get('user')->row_array();
   }
+
+  public function insertAppointment($data)
+  {
+    return $this->db->insert('appoitment', $data);
+  }
+
 }
