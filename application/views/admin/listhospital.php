@@ -82,7 +82,7 @@
     </div>
 
     <!-- Modal Edit -->
-    <div class="modal fade" id="editHospitalModal" tabindex="-1" role="dialog" aria-labelledby="editHospitalModalLabel" aria-hidden="true">
+    <div class="modal" id="editHospitalModal" tabindex="-1" role="dialog" aria-labelledby="editHospitalModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -93,6 +93,9 @@
                 </div>
                 <form action="<?= base_url(); ?>Admin/editHospital/<?= $lh['id'] ?>" method="POST">
                     <div class="modal-body">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="id" name="id" value="<?= $lh['id']; ?>">
+                        </div>
                         <div class="form-group">
                             <input type="text" class="form-control" id="nama" name="nama" value="<?= $lh['nama']; ?>">
                         </div>
