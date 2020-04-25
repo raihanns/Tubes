@@ -8,41 +8,39 @@
             <?php if (validation_errors()) : ?>
                 <div class="alert alert-danger" role="alert">
                     <?= validation_errors(); ?>
-                <?php endif; ?>
                 </div>
-
-                <?= $this->session->flashdata('message'); ?>
-                <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newMenuModal">Add New Menu</a>
-                <table class="table table-hover">
-                    <thead>
+            <?php endif; ?>
+            <?= $this->session->flashdata('message'); ?> <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newMenuModal">Add New Menu</a>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Menu</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php $i = 1; ?>
+                    <?php foreach ($menu as $m) :  ?>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Menu</th>
-                            <th scope="col">Action</th>
+                            <th scope="row"><?= $i ?></th>
+                            <td><?= $m['menu']; ?></td>
+                            <td>
+                                <a href="" class="badge badge-success">Edit</a>
+                                <a href="<?= base_url('menu/deleteMenu/') . $m['id']; ?>" class="badge badge-danger" onclick="return confirm('Apakah anda yakin menghapus data ini?');">Delete</a>
+                            </td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        <?php $i = 1; ?>
-                        <?php foreach ($menu as $m) :  ?>
-                            <tr>
-                                <th scope="row"><?= $i ?></th>
-                                <td><?= $m['menu']; ?></td>
-                                <td>
-                                    <a href="" class="badge badge-success">Edit</a>
-                                    <a href="" class="badge badge-danger">Delete</a>
-                                </td>
-                            </tr>
-                            <?php $i++; ?>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
+                        <?php $i++; ?>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
         </div>
     </div>
 
 
 
     <!-- Modal -->
-    <div class="modal fade" id="newMenuModal" tabindex="-1" role="dialog" aria-labelledby="newMenuModalLabel" aria-hidden="true">
+    <div class="modal" id="newMenuModal" tabindex="-1" role="dialog" aria-labelledby="newMenuModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">

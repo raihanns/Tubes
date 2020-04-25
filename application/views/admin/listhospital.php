@@ -7,49 +7,49 @@
 
 
     <div class="row">
-      <?php if (validation_errors()) : ?>
-          <div class="alert alert-danger" role="alert">
-              <?= validation_errors(); ?>
-              </div>
-          <?php endif; ?>
+        <?php if (validation_errors()) : ?>
+            <div class="alert alert-danger" role="alert">
+                <?= validation_errors(); ?>
+            </div>
+        <?php endif; ?>
 
         <div class="col-lg">
-                <?= $this->session->flashdata('message'); ?>
-                <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newHospitalModal">Add New Hospital</a>
-                <table class="table table-hover">
-                    <thead>
+            <?= $this->session->flashdata('message'); ?>
+            <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newHospitalModal">Add New Hospital</a>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Alamat</th>
+                        <th scope="col">Slot</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php $i = 1; ?>
+                    <?php foreach ($listHospital as $lh) :  ?>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nama</th>
-                            <th scope="col">Alamat</th>
-                            <th scope="col">Slot</th>
-                            <th scope="col">Action</th>
+                            <th scope="row"><?= $i ?></th>
+                            <td><?= $lh['nama']; ?></td>
+                            <td><?= $lh['alamat']; ?></td>
+                            <td><?= $lh['slot']; ?></td>
+                            <td>
+                                <a href="" class="badge badge-success" data-toggle="modal" data-target="#editHospitalModal">Edit</a>
+                                <a href="<?= base_url('admin/deleteHospital/') . $lh['id']; ?>" class="badge badge-danger" onclick="return confirm('Apakah anda yakin menghapus data ini?');">Delete</a>
+                            </td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        <?php $i = 1; ?>
-                        <?php foreach ($listHospital as $lh) :  ?>
-                            <tr>
-                                <th scope="row"><?= $i ?></th>
-                                <td><?= $lh['nama']; ?></td>
-                                <td><?= $lh['alamat']; ?></td>
-                                <td><?= $lh['slot']; ?></td>
-                                <td>
-                                    <a href="" class="badge badge-success" data-toggle="modal" data-target="#editHospitalModal">Edit</a>
-                                    <a href="<?= base_url('admin/deleteHospital/') . $lh['id']; ?>" class="badge badge-danger" onclick="return confirm('Apakah anda yakin menghapus data ini?');">Delete</a>
-                                </td>
-                            </tr>
-                            <?php $i++; ?>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
+                        <?php $i++; ?>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
         </div>
     </div>
 
 
 
     <!-- Modal Tambah -->
-    <div class="modal fade" id="newHospitalModal" tabindex="-1" role="dialog" aria-labelledby="newHospitalModalLabel" aria-hidden="true">
+    <div class="modal" id="newHospitalModal" tabindex="-1" role="dialog" aria-labelledby="newHospitalModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">

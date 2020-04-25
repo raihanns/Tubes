@@ -18,20 +18,20 @@ class Admin extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $data['title'] = 'Dashboard';
         $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar');
+        $this->load->view('templates/sidebar', $data);
         $this->load->view('Main', $data);
         $this->load->view('templates/footer');
     }
 
-    public function members()
-    {
-        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-        $data['title'] = 'List Members';
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar');
-        $this->load->view('admin/listmembers', $data);
-        $this->load->view('templates/footer');
-    }
+    // public function members()
+    // {
+    //     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    //     $data['title'] = 'List Members';
+    //     $this->load->view('templates/header', $data);
+    //     $this->load->view('templates/sidebar');
+    //     $this->load->view('admin/listmembers', $data);
+    //     $this->load->view('templates/footer');
+    // }
 
     public function role()
     {
@@ -81,7 +81,8 @@ class Admin extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Akses berhasil diubah!</div>');
     }
 
-    public function listHospital(){
+    public function listHospital()
+    {
         $data['listHospital'] = $this->db->get('hospital')->result_array();
         $data['title'] = 'List Hospital';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
@@ -92,10 +93,10 @@ class Admin extends CI_Controller
         $this->form_validation->set_rules('slot', 'Slot', 'required');
 
         if ($this->form_validation->run() == false) {
-          $this->load->view('templates/header',$data);
-          $this->load->view('admin/listhospital',$data);
-          $this->load->view('templates/sidebar',$data);
-          $this->load->view('templates/footer');
+            $this->load->view('templates/header', $data);
+            $this->load->view('admin/listhospital', $data);
+            $this->load->view('templates/sidebar', $data);
+            $this->load->view('templates/footer');
         } else {
             $data = [
                 'nama' => $this->input->post('nama'),
@@ -105,22 +106,21 @@ class Admin extends CI_Controller
             $this->M_Hospital->insertHospital($data);
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Hospital berhasil ditambah!</div>');
             redirect('admin/listhospital');
-
-          }
+        }
     }
 
-    public function deleteHospital($id){
+    public function deleteHospital($id)
+    {
         $this->M_Hospital->deleteHospital($id);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Hospital berhasil dihapus!</div>');
         redirect('admin/listhospital');
     }
 
-    public function editHospital($id){
+    public function editHospital($id)
+    {
 
-      $this->M_Hospital->editHospital($id);
-      $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Hospital berhasil diedit!</div>');
-      redirect('admin/listhospital');
+        $this->M_Hospital->editHospital($id);
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Hospital berhasil diedit!</div>');
+        redirect('admin/listhospital');
     }
-
-
 }

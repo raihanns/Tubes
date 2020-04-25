@@ -7,6 +7,8 @@ class Menu extends CI_Controller
     {
         parent::__construct();
         is_logged_in();
+
+        $this->load->model('M_Menu');
     }
 
 
@@ -34,6 +36,22 @@ class Menu extends CI_Controller
         }
     }
 
+    // public function deleteMenu()
+    // {
+    //     $this->M_Menu->deleteMenu($id);
+    //     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Menu berhasil dihapus!</div>');
+    //     redirect('menu');
+    // }
+
+
+
+
+
+
+
+
+
+    //controller submenu
     public function submenu()
     {
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
