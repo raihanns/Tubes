@@ -19,6 +19,10 @@
         font-size: 36px;
         margin-left: 50px;
     }
+    img {
+    width: 80px;
+    height: 80px;
+    }
 </style>
 
 
