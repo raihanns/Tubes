@@ -35,7 +35,7 @@
                             <td><?= $lh['alamat']; ?></td>
                             <td><?= $lh['slot']; ?></td>
                             <td>
-                                <a href="" class="badge badge-success" data-toggle="modal" data-target="#editHospitalModal">Edit</a>
+                                <a href="<?= base_url(); ?>admin/editHospital/<?= $lh['id'] ?>" class="badge badge-success float-center" >Edit</a>
                                 <a href="<?= base_url('admin/deleteHospital/') . $lh['id']; ?>" class="badge badge-danger" onclick="return confirm('Apakah anda yakin menghapus data ini?');">Delete</a>
                             </td>
                         </tr>
@@ -74,42 +74,6 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary">Add</button>
-                    </div>
-                </form>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Edit -->
-    <div class="modal" id="editHospitalModal" tabindex="-1" role="dialog" aria-labelledby="editHospitalModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editHospitalModalLabel">Edit Hospital</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form action="<?= base_url(); ?>Admin/editHospital/<?= $lh['id'] ?>" method="POST">
-                    <div class="modal-body">
-                        <div class="form-group">
-                          <input type="text" class="form-control" id="id" name="id" value="<?= $lh['id']; ?>">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="nama" name="nama" value="<?= $lh['nama']; ?>">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="alamat" name="alamat" value="<?= $lh['alamat']; ?>">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="slot" name="slot" value="<?= $lh['slot']; ?>">
-                        </div>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
 

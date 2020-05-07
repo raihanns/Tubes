@@ -24,16 +24,6 @@ class Admin extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    // public function members()
-    // {
-    //     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-    //     $data['title'] = 'List Members';
-    //     $this->load->view('templates/header', $data);
-    //     $this->load->view('templates/sidebar');
-    //     $this->load->view('admin/listmembers', $data);
-    //     $this->load->view('templates/footer');
-    // }
-
     public function role()
     {
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
@@ -110,7 +100,7 @@ class Admin extends CI_Controller
 
     public function listHospital()
     {
-        $data['listHospital'] = $this->db->get('hospital')->result_array();
+        $data['listHospital'] = $this->M_Hospital->getAllHospital();
         $data['title'] = 'List Hospital';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
@@ -145,9 +135,28 @@ class Admin extends CI_Controller
 
     public function editHospital($id)
     {
+      $data['listHospital'] = $this->M_Hospital->getAllHospital();
+      $data['title'] = 'Form Edit Info Hospital';
+      $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+      $data['rs'] = $this->M_Hospital->getHospitalById($id);
 
-        $this->M_Hospital->editHospital($id);
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Hospital berhasil diedit!</div>');
-        redirect('admin/listhospital');
+      $this->form_validation->set_rules('nama','nama','required');
+      $this->form_validation->set_rules('alamat','alamat','required');
+      $this->form_validation->set_rules('slot','slot','required');
+
+
+      if ($this->form_validation->run() == false) {
+        $this->load->view('templates/header', $data);
+        $this->load->view('admin/edithospital', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/footer');
+      }else{
+        $data = $this->M_Hospital->editHospital($id);
+        if($this->db->affected_rows() > 0){
+          $message = ['flash' => 'data changed successfully'];
+          $this->session->set_flashdata($message);
+          redirect('admin/listhospital');
+        }
+      }
     }
 }

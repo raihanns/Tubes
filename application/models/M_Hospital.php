@@ -16,7 +16,6 @@ class M_Hospital extends CI_model
   public function editHospital($id)
   {
         $data = [
-          'id' => $this->input->post('id'),
           'nama' => $this->input->post('nama'),
           'alamat' => $this->input->post('alamat'),
           'slot' => $this->input->post('slot')
@@ -36,4 +35,11 @@ class M_Hospital extends CI_model
     $this->db->where('id', $id);
     return $this->db->get('hospital')->row_array();
   }
+
+  public function Laporan($name)
+  {
+    $this->db->where('hospital', $name);
+    return $this->db->get('appoitment')->result_array();
+  }
+
 }
