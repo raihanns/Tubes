@@ -10,8 +10,6 @@
         <?php endif; ?>
 
         <div class="col-lg">
-            <?= $this->session->flashdata('message'); ?>
-            <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newHospitalModal">Add New Hospital</a>
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -27,7 +25,7 @@
                             <th scope="row"><?= $i ?></th>
                             <td><?= $lh['nama']; ?></td>
                             <td>
-                                <a href="<?= base_url(); ?>Laporan/tampil/<?= $lh['nama'] ?>" class="badge badge-success float-center" >Tampilkan Laporan</a>
+                                <a href="<?= base_url(); ?>Laporan/tampil/<?= $lh['id'] ?>" class="badge badge-success float-center" >Tampilkan Laporan</a>
                             </td>
                         </tr>
                         <?php $i++; ?>
