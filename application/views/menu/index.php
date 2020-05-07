@@ -26,7 +26,7 @@
                             <th scope="row"><?= $i ?></th>
                             <td><?= $m['menu']; ?></td>
                             <td>
-                                <a href="" class="badge badge-success">Edit</a>
+                                <a href="<?= base_url('menu/editmenu/') . $m['id']; ?>" class="badge badge-success">Edit</a>
                                 <a href="<?= base_url('menu/deleteMenu/') . $m['id']; ?>" class="badge badge-danger" onclick="return confirm('Apakah anda yakin menghapus data ini?');">Delete</a>
                             </td>
                         </tr>

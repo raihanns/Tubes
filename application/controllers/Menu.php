@@ -42,12 +42,33 @@ class Menu extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Menu berhasil dihapus!</div>');
         redirect('menu');
     }
-    public function deleteSubMenu($id)
+
+    public function editMenu($id)
     {
-        $this->M_Menu->deleteSubMenu($id);
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Submenu berhasil dihapus!</div>');
-        redirect('menu/submenu');
+        // $data['listHospital'] = $this->M_Hospital->getAllHospital();
+        $data['title'] = 'Form Edit MENU';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['menu'] = $this->M_Menu->getMenuById($id);
+
+        $this->form_validation->set_rules('menu', 'menu', 'required');
+
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('templates/sidebar');
+            $this->load->view('menu/editmenu', $data);
+            $this->load->view('templates/footer');
+        } else {
+            $data = $this->M_Menu->editMenu($id);
+            if ($this->db->affected_rows() > 0) {
+                $message = ['flash' => 'data changed successfully'];
+                $this->session->set_flashdata($message);
+                redirect('menu');
+            }
+        }
     }
+
+
 
 
     //controller submenu
@@ -82,5 +103,11 @@ class Menu extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Submenu berhasil ditambah!</div>');
             redirect('menu/submenu');
         }
+    }
+    public function deleteSubMenu($id)
+    {
+        $this->M_Menu->deleteSubMenu($id);
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Submenu berhasil dihapus!</div>');
+        redirect('menu/submenu');
     }
 }

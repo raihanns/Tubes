@@ -20,6 +20,12 @@ class M_Menu extends CI_Model
         return $this->db->get('user_menu')->result_array();
     }
 
+    public function getMenuById($id)
+    {
+        $this->db->where('id', $id);
+        return $this->db->get('user_menu')->row_array();
+    }
+
     public function deleteMenu($id)
     {
         $this->db->where('id', $id);
@@ -30,5 +36,14 @@ class M_Menu extends CI_Model
     {
         $this->db->where('id', $id);
         $this->db->delete('user_sub_menu');
+    }
+
+    public function editMenu($id)
+    {
+        $data = [
+            'menu' => $this->input->post('menu')
+        ];
+        $this->db->where('id', $id);
+        $this->db->update('user_menu', $data);
     }
 }
