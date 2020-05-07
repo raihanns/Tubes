@@ -27,7 +27,7 @@
                             <th scope="row"><?= $i ?></th>
                             <td><?= $lh['nama']; ?></td>
                             <td>
-                                <a href="<?= base_url(); ?>Laporan/tampil/<?= $lh['nama'] ?>" class="badge badge-success float-center" >Tampilkan Laporan</a>
+                                <a href="<?= base_url(); ?>Laporan/tampil/<?= $lh['id'] ?>" class="badge badge-success float-center" >Tampilkan Laporan</a>
                             </td>
                         </tr>
                         <?php $i++; ?>

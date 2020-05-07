@@ -36,6 +36,12 @@ class M_Hospital extends CI_model
     return $this->db->get('hospital')->row_array();
   }
 
+  public function getHospitalNameById($id)
+  {
+    $this->db->where('id', $id);
+    return $this->db->get('hospital')->row('nama');
+  }
+
   public function Laporan($name)
   {
     $this->db->where('hospital', $name);

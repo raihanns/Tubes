@@ -21,8 +21,11 @@ class Laporan extends CI_Controller
       $this->load->view('templates/footer');
     }
 
-    public function tampil($name){
-      $data['rs'] = $this->M_Hospital->Laporan($name);
+    public function tampil($id){
+      // proses dari id rubah ke nama masukin ke $name terus keluarin ke view
+      $hospital =  $this->M_Hospital->getHospitalNameById($id);
+
+      $data['rs'] = $this->M_Hospital->Laporan($hospital);
       $data['title'] = 'Laporan';
       $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
       $this->load->view('templates/header', $data);
