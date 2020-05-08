@@ -1,8 +1,13 @@
 <script>
     $(document).ready(function(){
         $('#modapp').modal('show');
-    }); 
+    });
 </script>
+<style>
+    #datepicker {
+      z-index: 1600 !important; /* has to be larger than 1050 */
+    }
+</style>
 
 <div class="modal" id="modapp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
@@ -55,5 +60,3 @@
 		</div>
 	</div>
 	</div>
-
-                    

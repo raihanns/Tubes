@@ -56,13 +56,17 @@ class User extends CI_Controller
 
     public function insertAppointment()
     {
-
           $data = [
               'nama_depan' => $this->input->post('nama_depan'),
               'nama_belakang' => $this->input->post('nama_belakang'),
               'hospital' => $this->input->post('rumah_sakit'),
               'tanggal' => $this->input->post('tanggal')
           ];
+          $id = $this->M_Hospital->getHospitalidByName($data['hospital']);
+          $data2 = [
+              'slot' => $this->M_Hospital->getHospitalSlotByName($data['hospital']) - 1
+          ];
+          $this->M_Hospital->editHospital2($id,$data2);
           $this->M_Auth->insertAppointment($data);
           $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Appointment sudah dibuat</div>');
           redirect('user/Appointment');

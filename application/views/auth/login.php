@@ -33,7 +33,7 @@
         padding-right:20%;
       }
       #loginbg{
-        background-image: url('assets/images/loginbg.jpg');
+        background-image: url('assets/images/login2.jpg');
         background-size: 100% ;
         height:100%;
         filter: contrast(90%) brightness(110%);
@@ -76,5 +76,3 @@
 
 
 	</body>
-
-

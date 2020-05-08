@@ -48,4 +48,22 @@ class M_Hospital extends CI_model
     return $this->db->get('appoitment')->result_array();
   }
 
+  public function getHospitalSlotByName($name)
+  {
+    $this->db->where('nama', $name);
+    return $this->db->get('hospital')->row('slot');
+  }
+
+  public function getHospitalidByName($name)
+  {
+    $this->db->where('nama', $name);
+    return $this->db->get('hospital')->row('id');
+  }
+
+  public function editHospital2($id,$data)
+  {
+     $this->db->where('id', $id);
+     $this->db->update('hospital', $data);
+  }
+
 }

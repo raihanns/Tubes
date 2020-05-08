@@ -73,7 +73,7 @@
                 <div id="box2"></div>
                 <div class="col-2"></div>
                 <div class="col-8">
-                    <h1 style="padding-top: 180px;">Dengan Kami Semua Sehat Semua Bahagia</h1> 
+                    <h1 style="padding-top: 180px;">Dengan Kami Semua Sehat Semua Bahagia</h1>
                     <h1 style="padding-top: 150px;">Berita Terkini</h1>
                 </div>
                 <div class="col-2"></div>
@@ -95,7 +95,7 @@
                                     <div class="card-body">
                                         <h4 class="card-title">Apa itu Bakteri?</h4>
                                         <p class="card-text">Bakteri adalah organisme mikroskopis yang tidak terlihat dengan mata telanjang.</p>
-                                        <a href="<?= base_url('Bakteri'); ?>" class="btn btn-primary">See More</a>
+                                        <a href="<?= base_url('/Bakteri'); ?>" class="btn btn-primary">See More</a>
                                     </div>
                                 </div>
                             </div>

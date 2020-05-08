@@ -22,11 +22,9 @@ class Laporan extends CI_Controller
     }
 
     public function tampil($id){
-      // proses dari id rubah ke nama masukin ke $name terus keluarin ke view
       $hospital =  $this->M_Hospital->getHospitalNameById($id);
-
       $data['rs'] = $this->M_Hospital->Laporan($hospital);
-      $data['title'] = 'Laporan';
+      $data['title'] = 'Laporan ' . $hospital;
       $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
       $this->load->view('templates/header', $data);
       $this->load->view('admin/laporan/viewtable', $data);

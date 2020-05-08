@@ -135,10 +135,10 @@ h1{
           <div class="row">
             <div class="col-md-4">
               <div class="card mb-2">
-                <img class="card-img-top" src="<?php echo base_url() ?>/gambar/rshermina.jpg"
+                <img class="card-img-top" src="<?php echo base_url() ?>/gambar/telkomedika.jpg"
                   alt="Card image cap">
                 <div class="card-body">
-                  <h4 class="card-title">RS Hermina</h4>
+                  <h4 class="card-title">Telkomedika</h4>
                   <a class="btn btn-primary">Info Rumah Sakit</a>
                 </div>
               </div>
@@ -157,10 +157,10 @@ h1{
 
             <div class="col-md-4 clearfix d-none d-md-block">
               <div class="card mb-2">
-                <img class="card-img-top" src="<?php echo base_url() ?>/gambar/rspersahabatan.jpg"
+                <img class="card-img-top" src="<?php echo base_url() ?>/gambar/rshs.jpg"
                   alt="Card image cap">
                 <div class="card-body">
-                  <h4 class="card-title">RS Persahabatan</h4>
+                  <h4 class="card-title">RS Hasan Sadikin</h4>
                  <a class="btn btn-primary"> Info Rumah Sakit</a>
                 </div>
               </div>
@@ -169,6 +169,43 @@ h1{
         </div>
         <!--/.Second slide-->
         <!--Third slide-->
+        <div class="carousel-item">
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-2">
+                <img class="card-img-top" src="<?php echo base_url() ?>/gambar/rssantosa.png"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">RS Santosa</h4>
+                  <a class="btn btn-primary">Info Rumah Sakit</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" src="<?php echo base_url() ?>/gambar/rsah.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">RS Al Ihsan</h4>
+                  <a class="btn btn-primary">Info Rumah Sakit</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" src="<?php echo base_url() ?>/gambar/rsdc.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">RS Dr Cipto Mangunkusumo</h4>
+                 <a class="btn btn-primary"> Info Rumah Sakit</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <!--/.Third slide-->
       </div>
       <!--/.Slides-->

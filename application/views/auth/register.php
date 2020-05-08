@@ -14,7 +14,7 @@
         padding-right:20%;
       }
       #registerbg{
-        background-image: url('../assets/images/loginbg.jpg');
+        background-image: url('../assets/images/regis2.jpg');
         background-size: 100% ;
         height:100%;
         filter: contrast(90%) brightness(110%);
