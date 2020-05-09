@@ -1,41 +1,38 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>jQuery UI Datepicker - Default functionality</title>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="/resources/demos/style.css">
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-  } );
+    $(document).ready(function(){
+        $('#modapp').modal('show');
+    });
 </script>
+<style>
+h3{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 54px;
+  color: Black;
+  text-align:center;
+}
 
-<form id="formregister" action="<?= site_url('User/insertAppointment') ?>" method="post">
-          <div class="form-group">
-              <div class="form-row">
-                  <div class="col-sm-6">
-                      <label for="nama_depan">Nama Depan</label>
-                      <input type="text" class="form-control" name="nama_depan" value="<?= set_value('nama_depan') ?>" required>
-                  </div>
-                  <div class="col-sm-6">
-                      <label for="nama_belakang">Nama Belakang</label>
-                      <input type="text" class="form-control" name="nama_belakang" value="<?= set_value('nama_belakang') ?>" required>
-                  </div>
-                  <div class="col-sm-6">
-                      <label for="rumahsakit">Rumah Sakit</label>
-                      <select name="rumah_sakit" id="rumahsakit">
-                          <option selected="selected">Choose one</option>
-                          <?php foreach ($rs as $item) { ?>
-                              <option value="<?php echo strtolower($item['nama']); ?>"><?php echo $item['nama']; ?></option>
-                          <?php } ?>
-                      </select>
-                  </div>
-                  <div class="col-sm-6">
-                      Date: <input name="tanggal" type="text" id="datepicker">
-              </div>
-          </div>
-          <a href="<?php echo base_url() ?>/user"><button type="button" class="btn btn-secondary" >Tidak</button></a>
-<button type="submit" class="btn btn-primary button1">Submit</button>
-</div>
-</form>
+</style>
+<div class="modal" id="modapp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="exampleModalLabel">Appointment</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!-- isi form ini -->
+					<form id="formregister" action="<?= site_url('User/appointment') ?>" method="post">
+                    <h3> Appointment Berhasil Dibuat </h3>
+				<div class="modal-footer">
+                    <a href="<?php echo base_url() ?>/user"><button type="button" class="btn btn-secondary" >Kembali ke Home</button></a>
+					<button type="submit" class="btn btn-primary button1">Buat Appointment Lagi</button>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	</div>

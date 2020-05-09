@@ -54,9 +54,21 @@ class User extends CI_Controller
         $this->load->view('templates/footer', $data);
     }
 
+    public function alertappointment()
+    {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['rs'] = $this->M_Hospital->getAllHospital();
+        $data['title'] = 'Appointment Rumah Sakit';
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('Main', $data);
+        $this->load->view('user/NewAppointment', $data);
+        $this->load->view('templates/footer', $data);
+    }
+
     public function insertAppointment()
     {
-        
+
           $data = [
               'nama_depan' => $this->input->post('nama_depan'),
               'nama_belakang' => $this->input->post('nama_belakang'),
@@ -69,8 +81,9 @@ class User extends CI_Controller
           ];
           $this->M_Hospital->editHospital2($id,$data2);
           $this->M_Auth->insertAppointment($data);
-          $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Appointment sudah dibuat</div>');
-          redirect('user');
+          $message = ['flash' => 'Appointment Berhasil Dibuat'];
+          $this->session->set_flashdata($message);
+          redirect('user/alertappointment');
 
 
     }
