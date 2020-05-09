@@ -3,11 +3,7 @@
         $('#modapp').modal('show');
     });
 </script>
-<style>
-    #datepicker {
-      z-index: 1600 !important; /* has to be larger than 1050 */
-    }
-</style>
+
 
 <div class="modal" id="modapp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
@@ -40,14 +36,11 @@
                                     <?php } ?>
                                 </select>
                             </div>
-                            <div class="col-sm-6">
-                                <label for="inputtanggal">Tanggal</label>
-                                <input name="tanggal" id="datepicker" width="276" />
-                                <script>
-                                    $('#datepicker').datepicker({
-                                        uiLibrary: 'bootstrap4'
-                                    });
-                                </script>
+                            <div class="form-group row">
+                              <label for="example-date-input" class="col-2 col-form-label">Date</label>
+                              <div class="col-10">
+                                <input name = "tanggal" class="form-control" type="date" id="example-date-input">
+                              </div>
                             </div>
                         </div>
                     </div>
