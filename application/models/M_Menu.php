@@ -26,6 +26,13 @@ class M_Menu extends CI_Model
         return $this->db->get('user_menu')->row_array();
     }
 
+    public function getSubMenuById($id)
+    {
+        $this->db->where('id', $id);
+        return $this->db->get('user_sub_menu')->row_array();
+    }
+
+
     public function deleteMenu($id)
     {
         $this->db->where('id', $id);
@@ -45,5 +52,18 @@ class M_Menu extends CI_Model
         ];
         $this->db->where('id', $id);
         $this->db->update('user_menu', $data);
+    }
+
+    public function editSubMenu($id)
+    {
+        $data = [
+            'title' => $this->input->post('title'),
+            'menu_id' => $this->input->post('menu_id'),
+            'url' => $this->input->post('url'),
+            'icon' => $this->input->post('icon'),
+            'is_active' => $this->input->post('is_active')
+        ];
+        $this->db->where('id', $id);
+        $this->db->update('user_sub_menu', $data);
     }
 }

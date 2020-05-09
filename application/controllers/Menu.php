@@ -68,7 +68,34 @@ class Menu extends CI_Controller
         }
     }
 
+    public function editSubMenu($id)
+    {
+        $data['title'] = 'Form Edit SUBMENU';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['submenu'] = $this->M_Menu->getSubMenuById($id);
+        $data['menu'] = $this->db->get('user_menu')->result_array();
 
+
+        $this->form_validation->set_rules('menu', 'menu', 'required');
+        $this->form_validation->set_rules('title', 'Title', 'required');
+        $this->form_validation->set_rules('menu_id', 'Menu', 'required');
+        $this->form_validation->set_rules('url', 'URL', 'required');
+        $this->form_validation->set_rules('icon', 'icon', 'required');
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('templates/sidebar');
+            $this->load->view('menu/editsubmenu', $data);
+            $this->load->view('templates/footer');
+        } else {
+            $data = $this->M_Menu->editSubMenu($id);
+            if ($this->db->affected_rows() > 0) {
+                $message = ['flash' => 'data changed successfully'];
+                $this->session->set_flashdata($message);
+                redirect('menu/submenu');
+            }
+        }
+    }
 
 
     //controller submenu
