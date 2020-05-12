@@ -14,7 +14,7 @@
                         <form action="" method="post">
                             <input type="hidden" name="id" value="<?= $submenu['id'] ?>">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="title" name="title" value="<?= $submenu['title']  ?>">
+                                <input type="text" class="form-control" name="title" id="title"  value="<?= $submenu['title']  ?>">
                             </div>
                             <div class="form-group">
                                 <select name="menu_id" id="menu_id" class="form-control">
@@ -25,10 +25,10 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="url" name="url" value="<?= $submenu['url']  ?>">
+                                <input type="text" class="form-control" name="url" id="url"  value="<?= $submenu['url']  ?>">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="icon" name="icon" value="<?= $submenu['icon']  ?>">
+                                <input type="text" class="form-control" name="icon" id="icon"  value="<?= $submenu['icon']  ?>">
                             </div>
                             <div class="form-group">
                                 <div class="form-check">

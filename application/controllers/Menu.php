@@ -76,10 +76,9 @@ class Menu extends CI_Controller
         $data['menu'] = $this->db->get('user_menu')->result_array();
 
 
-        $this->form_validation->set_rules('menu', 'menu', 'required');
-        $this->form_validation->set_rules('title', 'Title', 'required');
-        $this->form_validation->set_rules('menu_id', 'Menu', 'required');
-        $this->form_validation->set_rules('url', 'URL', 'required');
+        $this->form_validation->set_rules('title', 'title', 'required');
+        $this->form_validation->set_rules('menu_id', 'menu_id', 'required');
+        $this->form_validation->set_rules('url', 'url', 'required');
         $this->form_validation->set_rules('icon', 'icon', 'required');
 
         if ($this->form_validation->run() == false) {
