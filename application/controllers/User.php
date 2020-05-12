@@ -21,6 +21,16 @@ class User extends CI_Controller
         $this->load->view('templates/footer');
     }
 
+    public function profile()
+    {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['title'] = 'My Profil';
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('user/profile', $data);
+        $this->load->view('templates/footer');
+    }
+
     public function members()
     {
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
@@ -69,23 +79,20 @@ class User extends CI_Controller
     public function insertAppointment()
     {
 
-          $data = [
-              'nama_depan' => $this->input->post('nama_depan'),
-              'nama_belakang' => $this->input->post('nama_belakang'),
-              'hospital' => $this->input->post('rumah_sakit'),
-              'tanggal' => $this->input->post('tanggal')
-          ];
-          $id = $this->M_Hospital->getHospitalidByName($data['hospital']);
-          $data2 = [
-              'slot' => $this->M_Hospital->getHospitalSlotByName($data['hospital']) - 1
-          ];
-          $this->M_Hospital->editHospital2($id,$data2);
-          $this->M_Auth->insertAppointment($data);
-          $message = ['flash' => 'Appointment Berhasil Dibuat'];
-          $this->session->set_flashdata($message);
-          redirect('user/alertappointment');
-
-
+        $data = [
+            'nama_depan' => $this->input->post('nama_depan'),
+            'nama_belakang' => $this->input->post('nama_belakang'),
+            'hospital' => $this->input->post('rumah_sakit'),
+            'tanggal' => $this->input->post('tanggal')
+        ];
+        $id = $this->M_Hospital->getHospitalidByName($data['hospital']);
+        $data2 = [
+            'slot' => $this->M_Hospital->getHospitalSlotByName($data['hospital']) - 1
+        ];
+        $this->M_Hospital->editHospital2($id, $data2);
+        $this->M_Auth->insertAppointment($data);
+        $message = ['flash' => 'Appointment Berhasil Dibuat'];
+        $this->session->set_flashdata($message);
+        redirect('user/alertappointment');
     }
-
 }

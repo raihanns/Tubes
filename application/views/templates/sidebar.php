@@ -19,9 +19,10 @@
         font-size: 36px;
         margin-left: 50px;
     }
+
     img {
-    width: 80px;
-    height: 80px;
+        width: 80px;
+        height: 80px;
     }
 </style>
 
@@ -32,7 +33,7 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
 
             <div style="text-align:center;">
-                <img src="<?php echo base_url('/assets/img/profile/') . $user['image']; ?>">
+                <img src="<?php echo base_url('/assets/images/') . $user['image']; ?>">
                 <br></br>
                 <h5 id="brand"><?= $user['nama_depan']; ?></h5>
             </div>
