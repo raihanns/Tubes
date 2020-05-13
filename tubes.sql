@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2020 at 08:14 PM
--- Server version: 10.4.10-MariaDB
--- PHP Version: 7.3.12
+-- Generation Time: May 13, 2020 at 05:33 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.2.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,6 +25,53 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `appoitment`
+--
+
+CREATE TABLE `appoitment` (
+  `id` int(11) NOT NULL,
+  `nama_depan` varchar(50) NOT NULL,
+  `nama_belakang` varchar(50) NOT NULL,
+  `hospital` varchar(50) NOT NULL,
+  `tanggal` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `appoitment`
+--
+
+INSERT INTO `appoitment` (`id`, `nama_depan`, `nama_belakang`, `hospital`, `tanggal`) VALUES
+(2, 'Syamsul', 'Rizal', 'rs pertamina', '2020-04-14'),
+(5, 'Syamsul', 'Rizal', 'telkomedika', '2020-04-14'),
+(17, 'Adham', 'Siwi', 'telkomedika', '2020-05-12'),
+(18, 'Adham', 'Angga', 'telkomedika', '2020-05-05'),
+(19, 'Bodat', 'Botak', 'rs pertamina', '2020-05-10'),
+(20, 'Yusril', 'Udin', 'rs pertamina', '2020-05-02'),
+(21, 'Erwin', 'Budi', 'rs persahabatan', '2020-05-12'),
+(22, 'Raihan', 'Nugraha', 'rs persahabatan', '2020-05-09'),
+(23, 'Kami', 'Budi', 'rs persahabatan', '2020-05-10'),
+(24, 'bagas', 'Eka', 'rs hermina', '2020-05-08'),
+(25, 'Ntong', 'setiawan', 'rs hermina', '2020-04-17'),
+(26, 'Ridhwan', 'Alek', 'rs hermina', '2020-05-09'),
+(27, 'Adham', 'Erlangga', 'rs jakarta', '2020-05-10'),
+(28, 'Erlangga', 'Adham', 'rs jakarta', '2020-05-02'),
+(29, 'Siwi', 'Adham', 'rs jakarta', '2020-04-22'),
+(30, 'Yusril', 'Ghani', 'rs hasan sadikin', '2020-05-03'),
+(31, 'Raihan', 'Nugraha', 'rs hasan sadikin', '2020-04-12'),
+(32, 'Bagas', 'Humas', 'rs hasan sadikin', '2020-04-27'),
+(33, 'Ferdian', 'Paleika', 'rs santosa', '2020-05-08'),
+(34, 'Ferdian', 'Akbar', 'rs santosa', '2020-05-09'),
+(35, 'Ridhwan', 'Nashir', 'rs santosa', '2020-05-05'),
+(36, 'Buaya', 'Darat', 'rs al ihsan', '2020-05-02'),
+(37, 'Boyke', 'Meong', 'rs al ihsan', '2020-05-11'),
+(38, 'Luhut', 'Panjaian', 'rs al ihsan', '2020-05-08'),
+(39, 'Setyo', 'Novanto', 'rs dr cipto mangunkusumo', '2020-05-06'),
+(40, 'Luhut', 'Novanto', 'rs dr cipto mangunkusumo', '2020-05-02'),
+(41, 'Susi', 'Puji', 'rs dr cipto mangunkusumo', '2020-05-09');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `hospital`
 --
 
@@ -40,8 +87,15 @@ CREATE TABLE `hospital` (
 --
 
 INSERT INTO `hospital` (`id`, `nama`, `alamat`, `slot`) VALUES
-(0, 'RS', 'Jl. H Wahid no.31', 1),
-(1, 'Telkomedika', 'Telkom University', 5);
+(1, 'Telkomedika', 'Telkom University', 4),
+(9, 'RS Hermina', 'Bandung', 6),
+(10, 'RS Pertamina', 'Jakarta', 6),
+(11, 'RS Persahabatan', 'Jakarta', 2),
+(12, 'RS Jakarta', 'Jakarta', 3),
+(13, 'RS Hasan Sadikin', 'Bandung', 11),
+(14, 'RS Santosa', 'Bandung', 5),
+(15, 'RS Al Ihsan', 'Bandung', 4),
+(16, 'RS Dr Cipto Mangunkusumo', 'Jakarta', 3);
 
 -- --------------------------------------------------------
 
@@ -79,10 +133,12 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `nama_depan`, `nama_belakang`, `username`, `email`, `password`, `image`, `role_id`, `date_created`) VALUES
-(1, 'admin', 'mantap', 'admin', 'admiin@admin.com', 'admin', 'default.jpg', 1, 1587077337),
-(4, 'user', 'biasa', 'user', 'user@user.com', 'user', 'default.jpg', 2, 1587079584),
-(5, 'Tes', 'Tis', 'testis', '12321@1232.com', '123', 'default.jpg', 2, 1587080061),
-(6, 'raihan', '123', '123', '12321@123.com', '123', 'default.jpg', 2, 1587467436);
+(1, 'admin', 'mantap', 'admin', 'admiin@admin.com', 'admin', 'avatar.png', 1, 1587077337),
+(4, 'Syamsul', 'Rizal', 'syamsul', 'syamsul@gamil.com', '123', 'avatar.png', 2, 1587079584),
+(5, 'Raihan', 'Nugraha', 'raihanns', 'raihanaa@gamil.com', '123', 'avatar.png', 2, 1587080061),
+(7, 'Yusril', 'Alaudin', 'yusril', 'yusril@gamil.com', '123', 'avatar.png', 2, 1589381561),
+(8, 'Adham', 'Erlangga', 'adham', 'adham@gamil.com', '123', 'avatar.png', 2, 1589381593),
+(9, 'Ridhwan', 'Nashir', 'ridhwan', 'ridhwanalek@gamil.com', '123', 'avatar.png', 2, 1589381630);
 
 -- --------------------------------------------------------
 
@@ -106,7 +162,8 @@ INSERT INTO `user_access_menu` (`id`, `role_id`, `menu_id`) VALUES
 (8, 1, 2),
 (12, 2, 5),
 (13, 1, 5),
-(14, 1, 3);
+(14, 1, 3),
+(15, 1, 6);
 
 -- --------------------------------------------------------
 
@@ -127,8 +184,8 @@ INSERT INTO `user_menu` (`id`, `menu`) VALUES
 (1, 'Admin'),
 (2, 'User'),
 (3, 'Menu'),
-(4, '123'),
-(5, 'Appointment');
+(5, 'Appointment'),
+(6, 'Laporan');
 
 -- --------------------------------------------------------
 
@@ -170,18 +227,25 @@ CREATE TABLE `user_sub_menu` (
 
 INSERT INTO `user_sub_menu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active`) VALUES
 (1, 1, 'Dashboard', 'admin', 'home', 1),
-(2, 2, 'My Profile', 'user', 'user', 1),
-(3, 2, 'Edit Profile', 'user/edit', 'edit', 1),
+(2, 2, 'My Profile', 'user/profile', 'user', 1),
+(3, 2, 'Edit Profile', 'user/editprofile', 'edit', 1),
 (4, 3, 'Menu Management', 'menu', 'menu', 1),
 (5, 3, 'Submenu Management', 'menu/submenu', 'folder', 1),
 (6, 1, 'Data Rumah Sakit', 'admin/listhospital', 'hard-drive', 1),
 (7, 4, 'tes', 'tes', 'tes', 1),
 (8, 1, 'Role', 'admin/role', 'sliders', 1),
-(9, 5, 'Medical Appointment', 'tes', 'alert-circle', 1);
+(9, 5, 'Medical Appointment', 'user/appointment', 'alert-circle', 1),
+(13, 6, 'Appointment', 'Laporan', 'alert-circle', 1);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `appoitment`
+--
+ALTER TABLE `appoitment`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `hospital`
@@ -230,10 +294,16 @@ ALTER TABLE `user_sub_menu`
 --
 
 --
+-- AUTO_INCREMENT for table `appoitment`
+--
+ALTER TABLE `appoitment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+
+--
 -- AUTO_INCREMENT for table `hospital`
 --
 ALTER TABLE `hospital`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `news`
@@ -245,19 +315,19 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `user_access_menu`
 --
 ALTER TABLE `user_access_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `user_menu`
 --
 ALTER TABLE `user_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user_role`
@@ -269,7 +339,7 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `user_sub_menu`
 --
 ALTER TABLE `user_sub_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
