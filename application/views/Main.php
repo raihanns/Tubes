@@ -87,6 +87,13 @@
                             <li data-target="#demo" data-slide-to="1"></li>
                             <li data-target="#demo" data-slide-to="2"></li>
                         </ul>
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
                         <!-- The slideshow -->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -94,8 +101,9 @@
                                     <img class="card-img-top" src="https://p4.wallpaperbetter.com/wallpaper/204/962/381/microscope-bacteria-microorganisms-microbes-wallpaper-preview.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h4 class="card-title">Apa itu Bakteri?</h4>
-                                        <p class="card-text">Bakteri adalah organisme mikroskopis yang tidak terlihat dengan mata telanjang.</p>
-                                        <a href="<?= base_url('/Bakteri'); ?>" class="btn btn-primary">See More</a>
+                                        <p class="card-text">Bakteri adalah organisme mikroskopis yang tidak terlihat dengan mata telanjang....<a style="align: center;" href="<?= base_url('/Bakteri'); ?>" class="btn btn-primary">See More</a></p>
+
+
                                     </div>
                                 </div>
                             </div>
@@ -104,8 +112,8 @@
                                     <img class="card-img-top" src="https://asset-a.grid.id/crop/0x0:0x0/x/photo/2020/02/18/1247754669.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h4 class="card-title">Virus</h4>
-                                        <p class="card-text">Virus adalah organisme mikroskopik (super kecil) yang tersebar di berbagai penjuru dunia dan cenderung bersifat parasit.</p>
-                                        <a href="<?= base_url('Virus'); ?>" class="btn btn-primary">See More</a>
+                                        <p class="card-text">Virus adalah organisme mikroskopik (super kecil) yang tersebar di berbagai penjuru dunia dan cenderung bersifat parasit....<a href="<?= base_url('Virus'); ?>" class="btn btn-primary">See More</a></p>
+
                                     </div>
                                 </div>
                             </div>
@@ -114,19 +122,13 @@
                                     <img class="card-img-top" src="https://motionarray.imgix.net/preview-28388ONwaHNcGX0_0006.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h4 class="card-title">Berita lainnya</h4>
-                                        <p class="card-text">Ingin tahu lebih banyak informasi? Klik tombol dibawah!</p>
-                                        <a href="<?= base_url('News'); ?>" class="btn btn-primary">See More</a>
+                                        <p class="card-text">Ingin tahu lebih banyak informasi? Klik tombol....<a href="<?= base_url('News'); ?>" class="btn btn-primary">See More</a></p>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Left and right controls -->
-                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </a>
-                        <a class="carousel-control-next" href="#demo" data-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </a>
+
                     </div>
                 </div>
             </div>
