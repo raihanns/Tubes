@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2020 at 03:11 PM
+-- Generation Time: May 13, 2020 at 03:23 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -43,7 +43,20 @@ CREATE TABLE `appoitment` (
 INSERT INTO `appoitment` (`id`, `nama_depan`, `nama_belakang`, `hospital`, `tanggal`) VALUES
 (1, 'Syamsul', 'Rizal', 'rs pertamina', '0000-00-00'),
 (2, 'Syamsul', 'Rizal', 'rs pertamina', '2020-04-14'),
-(3, 'Syamsul', 'Rizal', 'rs persahabatan', '04/16/2020');
+(3, 'Syamsul', 'Rizal', 'rs persahabatan', '04/16/2020'),
+(4, 'raihan', 'fakboy', 'telkomedika', '04/28/2020'),
+(5, 'Syamsul', 'Rizal', 'telkomedika', '2020-04-14'),
+(6, 'sam', 'sul', 'rs jakarta', '2 desember 3029'),
+(7, 'sam', 'sul', 'telkomedika', '2 desember 2019'),
+(8, 'sam', 'sul', 'rs hasan sadikin', '2020-05-18'),
+(9, 'sasa', 'dsfa', 'rs santosa', '2020-07-08'),
+(10, 'ads', 'wrwqr', 'rs hermina', '2020-08-11'),
+(11, 'asdas', 'eqreqt', 'rs pertamina', '2020-05-19'),
+(12, 'adsa', 'wrwqt', 'rs al ihsan', '2020-05-19'),
+(13, 'asda', 'fdsfgd', 'rs al ihsan', '2020-05-20'),
+(14, 'asda', 'fdsfgd', 'rs al ihsan', '2020-05-20'),
+(15, 'asfaf', 'dagadg', 'rs dr cipto mangunkusumo', '2020-05-26'),
+(16, 'asafg', 'dgsag', 'rs dr cipto mangunkusumo', '2020-04-28');
 
 -- --------------------------------------------------------
 
@@ -63,11 +76,15 @@ CREATE TABLE `hospital` (
 --
 
 INSERT INTO `hospital` (`id`, `nama`, `alamat`, `slot`) VALUES
-(1, 'Telkomedika', 'Telkom University', 12),
-(9, 'RS Hermina', 'Jakarta', 10),
-(10, 'RS Pertamina', 'Jakarta', 9),
+(1, 'Telkomedika', 'Telkom University', 6),
+(9, 'RS Hermina', 'Bandung', 9),
+(10, 'RS Pertamina', 'Jakarta', 4),
 (11, 'RS Persahabatan', 'Jakarta', 5),
-(12, 'RS Jakarta', 'Bandung', 7);
+(12, 'RS Jakarta', 'Jakarta', 6),
+(13, 'RS Hasan Sadikin', 'Bandung', 14),
+(14, 'RS Santosa', 'Bandung', 8),
+(15, 'RS Al Ihsan', 'Bandung', 2),
+(16, 'RS Dr Cipto Mangunkusumo', 'Jakarta', 6);
 
 -- --------------------------------------------------------
 
@@ -132,7 +149,8 @@ INSERT INTO `user_access_menu` (`id`, `role_id`, `menu_id`) VALUES
 (8, 1, 2),
 (12, 2, 5),
 (13, 1, 5),
-(14, 1, 3);
+(14, 1, 3),
+(15, 1, 6);
 
 -- --------------------------------------------------------
 
@@ -153,8 +171,8 @@ INSERT INTO `user_menu` (`id`, `menu`) VALUES
 (1, 'Admin'),
 (2, 'User'),
 (3, 'Menu'),
-(4, '123'),
-(5, 'Appointment');
+(5, 'Appointment'),
+(6, 'Laporan');
 
 -- --------------------------------------------------------
 
@@ -196,14 +214,15 @@ CREATE TABLE `user_sub_menu` (
 
 INSERT INTO `user_sub_menu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active`) VALUES
 (1, 1, 'Dashboard', 'admin', 'home', 1),
-(2, 2, 'My Profile', 'user', 'user', 1),
+(2, 2, 'My Profile', 'user/profile', 'user', 1),
 (3, 2, 'Edit Profile', 'user/edit', 'edit', 1),
 (4, 3, 'Menu Management', 'menu', 'menu', 1),
 (5, 3, 'Submenu Management', 'menu/submenu', 'folder', 1),
 (6, 1, 'Data Rumah Sakit', 'admin/listhospital', 'hard-drive', 1),
 (7, 4, 'tes', 'tes', 'tes', 1),
 (8, 1, 'Role', 'admin/role', 'sliders', 1),
-(9, 5, 'Medical Appointment', 'user/appointment', 'alert-circle', 1);
+(9, 5, 'Medical Appointment', 'user/appointment', 'alert-circle', 1),
+(13, 6, 'Appointment', 'Laporan', 'alert-circle', 1);
 
 --
 -- Indexes for dumped tables
@@ -265,13 +284,13 @@ ALTER TABLE `user_sub_menu`
 -- AUTO_INCREMENT for table `appoitment`
 --
 ALTER TABLE `appoitment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `hospital`
 --
 ALTER TABLE `hospital`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `news`
@@ -289,13 +308,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user_access_menu`
 --
 ALTER TABLE `user_access_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `user_menu`
 --
 ALTER TABLE `user_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user_role`
@@ -307,7 +326,7 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `user_sub_menu`
 --
 ALTER TABLE `user_sub_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
