@@ -41,17 +41,6 @@ class User extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function edit()
-    {
-        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-        $data['title'] = 'Edit Profil';
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar', $data);
-        $this->load->view('Main', $data);
-        $this->load->view('user/edit');
-        $this->load->view('templates/footer');
-    }
-
     public function appointment()
     {
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
@@ -95,4 +84,32 @@ class User extends CI_Controller
         $this->session->set_flashdata($message);
         redirect('user/alertappointment');
     }
+
+    public function editprofile()
+    {
+      $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+      $data['title'] = 'Edit Profil';
+      $id = $data['user']['id'];
+      $this->form_validation->set_rules('namadepan','namadepan','required');
+      $this->form_validation->set_rules('namabelakang','namabelakang','required');
+      $this->form_validation->set_rules('email','email','required');
+      $this->form_validation->set_rules('password','password','required');
+
+      if ($this->form_validation->run() == false) {
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('Main', $data);
+        $this->load->view('user/edit');
+        $this->load->view('templates/footer');
+      }else{
+        $data = $this->M_Auth->editUser($id);
+
+        if($this->db->affected_rows() > 0){
+          $message = ['flash' => 'data changed successfully'];
+          $this->session->set_flashdata($message);
+          redirect('user');
+        }
+      }
+    }
+
 }

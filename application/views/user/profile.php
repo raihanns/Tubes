@@ -3,8 +3,8 @@
         <h1 style="padding-top:80px;" class="h2"><?= $title; ?></h1>
     </div>
     <div class="card mb-5" style="width: 30rem">
-        <div class="col-lg-5">
-            <img src="<?= base_url('assets/images/' . $user['image']) ?>" class="card-img-top" alt="...">
+        <div class="col-lg-5" style="padding-left : 100px">
+            <img src="<?= base_url('assets/images/' . $user['image']) ?>" >
         </div>
 
         <div class="card-body">

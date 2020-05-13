@@ -98,7 +98,7 @@ h1{
                   alt="Card image cap">
                 <div class="card-body">
                   <h4 class="card-title">RS Hermina</h4>
-                  <a class="btn btn-primary">Info Rumah Sakit</a>
+
                 </div>
               </div>
             </div>
@@ -109,7 +109,7 @@ h1{
                   alt="Card image cap">
                 <div class="card-body">
                   <h4 class="card-title">RS Pertamina</h4>
-                  <a class="btn btn-primary">Info Rumah Sakit</a>
+
                 </div>
               </div>
             </div>
@@ -120,7 +120,7 @@ h1{
                   alt="Card image cap">
                 <div class="card-body">
                   <h4 class="card-title">RS Persahabatan</h4>
-                  <a class="btn btn-primary">Info Rumah Sakit</a>
+
                 </div>
               </div>
             </div>
@@ -139,7 +139,7 @@ h1{
                   alt="Card image cap">
                 <div class="card-body">
                   <h4 class="card-title">Telkomedika</h4>
-                  <a class="btn btn-primary">Info Rumah Sakit</a>
+
                 </div>
               </div>
             </div>
@@ -150,7 +150,7 @@ h1{
                   alt="Card image cap">
                 <div class="card-body">
                   <h4 class="card-title">RS Jakarta</h4>
-                  <a class="btn btn-primary">Info Rumah Sakit</a>
+
                 </div>
               </div>
             </div>
@@ -161,7 +161,7 @@ h1{
                   alt="Card image cap">
                 <div class="card-body">
                   <h4 class="card-title">RS Hasan Sadikin</h4>
-                 <a class="btn btn-primary"> Info Rumah Sakit</a>
+
                 </div>
               </div>
             </div>
@@ -178,7 +178,7 @@ h1{
                   alt="Card image cap">
                 <div class="card-body">
                   <h4 class="card-title">RS Santosa</h4>
-                  <a class="btn btn-primary">Info Rumah Sakit</a>
+
                 </div>
               </div>
             </div>
@@ -189,7 +189,7 @@ h1{
                   alt="Card image cap">
                 <div class="card-body">
                   <h4 class="card-title">RS Al Ihsan</h4>
-                  <a class="btn btn-primary">Info Rumah Sakit</a>
+
                 </div>
               </div>
             </div>
@@ -200,7 +200,7 @@ h1{
                   alt="Card image cap">
                 <div class="card-body">
                   <h4 class="card-title">RS Dr Cipto Mangunkusumo</h4>
-                 <a class="btn btn-primary"> Info Rumah Sakit</a>
+
                 </div>
               </div>
             </div>

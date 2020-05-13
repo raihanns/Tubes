@@ -27,11 +27,10 @@ class M_Auth extends CI_model
   public function editUser($id)
   {
     $data = [
-      'nama_depan' => $this->input->post('nama_depan', true),
-      'nama_belakang' => $this->input->post('nama_belakang', true),
+      'nama_depan' => $this->input->post('namadepan', true),
+      'nama_belakang' => $this->input->post('namabelakang', true),
       'email' => $this->input->post('email', true),
-      'password' => $this->input->post('password'),
-      'image' => 'default.jpg'
+      'password' => $this->input->post('password')
     ];
     $this->db->where('id', $id);
     $this->db->update('user', $data);
