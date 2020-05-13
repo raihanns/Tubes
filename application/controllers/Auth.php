@@ -92,7 +92,7 @@ class Auth extends CI_Controller
                 'username' => $this->input->post('username'),
                 'email' => $this->input->post('email', true),
                 'password' => $this->input->post('password'),
-                'image' => 'default.jpg',
+                'image' => 'avatar.png',
                 'role_id' => 2,
                 'date_created' => time()
             ];
@@ -122,5 +122,5 @@ class Auth extends CI_Controller
         $this->load->view('templates/footer', $data);
     }
 
-    
+
 }

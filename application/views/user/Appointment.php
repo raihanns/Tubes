@@ -20,11 +20,11 @@
                         <div class="form-row">
                             <div class="col-sm-6">
                                 <label for="nama_depan">Nama Depan</label>
-                                <input type="text" class="form-control" name="nama_depan" value="<?= set_value('nama_depan') ?>" required>
+                                <input type="text" class="form-control" name="nama_depan" value="<?= $user['nama_depan'] ?>" required>
                             </div>
                             <div class="col-sm-6">
                                 <label for="nama_belakang">Nama Belakang</label>
-                                <input type="text" class="form-control" name="nama_belakang" value="<?= set_value('nama_belakang') ?>" required>
+                                <input type="text" class="form-control" name="nama_belakang" value="<?= $user['nama_belakang'] ?>" required>
                             </div>
                             <div class="col-sm-6">
                                 <label for="rumahsakit">Rumah Sakit</label>
